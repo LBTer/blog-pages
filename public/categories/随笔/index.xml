@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>随笔 on LBT的 Blog</title>
+    <link>http://localhost:1313/categories/%E9%9A%8F%E7%AC%94/</link>
+    <description>Recent content in 随笔 on LBT的 Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 28 Aug 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/%E9%9A%8F%E7%AC%94/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>就开始第一篇吧</title>
+      <link>http://localhost:1313/2024/08/28/reading/</link>
+      <pubDate>Wed, 28 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/2024/08/28/reading/</guid>
+      <description>那天晚上灵光一闪 现在开始 纵有无数想法，记录下来引发下一层思考是否</description>
+    </item>
+  </channel>
+</rss>

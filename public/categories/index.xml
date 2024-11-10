@@ -2,31 +2,73 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on LBT的 Blog</title>
-    <link>http://localhost:1313/categories/</link>
+    <link>https://LBTer.github.io/categories/</link>
     <description>Recent content in Categories on LBT的 Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 04 Jun 2018 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 04 Oct 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://LBTer.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Tech</title>
-      <link>http://localhost:1313/categories/tech/</link>
-      <pubDate>Mon, 04 Jun 2018 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/tech/</guid>
+      <link>https://LBTer.github.io/categories/tech/</link>
+      <pubDate>Fri, 04 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://LBTer.github.io/categories/tech/</guid>
       <description></description>
     </item>
     <item>
-      <title>Tips</title>
-      <link>http://localhost:1313/categories/tips/</link>
-      <pubDate>Thu, 24 May 2018 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/tips/</guid>
+      <title>GROW</title>
+      <link>https://LBTer.github.io/categories/grow/</link>
+      <pubDate>Thu, 19 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://LBTer.github.io/categories/grow/</guid>
       <description></description>
     </item>
     <item>
-      <title>Life</title>
-      <link>http://localhost:1313/categories/life/</link>
-      <pubDate>Tue, 01 May 2018 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/life/</guid>
+      <title>Book</title>
+      <link>https://LBTer.github.io/categories/book/</link>
+      <pubDate>Thu, 12 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://LBTer.github.io/categories/book/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>LIFE</title>
+      <link>https://LBTer.github.io/categories/life/</link>
+      <pubDate>Sun, 08 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://LBTer.github.io/categories/life/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AI</title>
+      <link>https://LBTer.github.io/categories/ai/</link>
+      <pubDate>Wed, 04 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://LBTer.github.io/categories/ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>KNOWS</title>
+      <link>https://LBTer.github.io/categories/knows/</link>
+      <pubDate>Mon, 02 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://LBTer.github.io/categories/knows/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>TODO</title>
+      <link>https://LBTer.github.io/categories/todo/</link>
+      <pubDate>Mon, 02 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://LBTer.github.io/categories/todo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>WATCH</title>
+      <link>https://LBTer.github.io/categories/watch/</link>
+      <pubDate>Mon, 02 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://LBTer.github.io/categories/watch/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>PLAN</title>
+      <link>https://LBTer.github.io/categories/plan/</link>
+      <pubDate>Wed, 28 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://LBTer.github.io/categories/plan/</guid>
       <description></description>
     </item>
   </channel>

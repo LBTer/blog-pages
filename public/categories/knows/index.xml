@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>KNOWS on LBT的 Blog</title>
+    <link>https://LBTer.github.io/categories/knows/</link>
+    <description>Recent content in KNOWS on LBT的 Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 02 Sep 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://LBTer.github.io/categories/knows/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>网络协议知识一览</title>
+      <link>https://LBTer.github.io/post/2024-09-02-network/</link>
+      <pubDate>Mon, 02 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://LBTer.github.io/post/2024-09-02-network/</guid>
+      <description>逻辑链路层 VLAN: 虚拟局域网 ARP: 将逻辑和物理关联到一起 网络层 IP 头部长度20 协议结构（协议号，源ip，目标ip） 移动IP 传输层 ICMP，算是2.5层，</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Resume on LBT的 Blog</title>
+    <link>https://LBTer.github.io/tags/resume/</link>
+    <description>Recent content in Resume on LBT的 Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 20 Sep 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://LBTer.github.io/tags/resume/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>字节面经系列</title>
+      <link>https://LBTer.github.io/post/2024-09-20-bytedance/</link>
+      <pubDate>Fri, 20 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://LBTer.github.io/post/2024-09-20-bytedance/</guid>
+      <description>字节面经 https://www.kancloud.cn/leonshi/programming/2577007 golang知识点 GMP调度模型, 详情 Context用法 垃圾回收，优点和缺点, 详情 go语言逃逸分析，何时堆，何时栈？详情 channel defe</description>
+    </item>
+    <item>
+      <title>如何作出好的简历？</title>
+      <link>https://LBTer.github.io/post/2024-09-12-resume-inside-out/</link>
+      <pubDate>Thu, 12 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://LBTer.github.io/post/2024-09-12-resume-inside-out/</guid>
+      <description>好简历的定义 好简历：相对公平变现出你能力的简历 杰出的简历：快速吸引雇佣方注意力的简历 通常面试者愿意从简历里面看见一个人进步的经过（需要避免熟</description>
+    </item>
+    <item>
+      <title>求职途径</title>
+      <link>https://LBTer.github.io/post/2024-09-08-look-for-job/</link>
+      <pubDate>Sun, 08 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://LBTer.github.io/post/2024-09-08-look-for-job/</guid>
+      <description>求职网站 脉脉不行，只是交流网站 boss 牛客 猎聘 其他求职途径 视频1 视频2 总结 瞪羚企业 胡润百富&amp;ndash;&amp;gt;创业系列&amp;ndash;&amp;gt;全球</description>
+    </item>
+    <item>
+      <title>项目总结</title>
+      <link>https://LBTer.github.io/post/2024-09-08-project-summarize/</link>
+      <pubDate>Sun, 08 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://LBTer.github.io/post/2024-09-08-project-summarize/</guid>
+      <description>应用检测项目 项目搭建/k8s k8s概念掌握 pod、deployment 项目架构 应用检测项目（重点） 基本组件 3.优化点 队列优化 数据源项目 APP</description>
+    </item>
+    <item>
+      <title>系统设计案例</title>
+      <link>https://LBTer.github.io/post/2024-09-06-dropbox/</link>
+      <pubDate>Fri, 06 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://LBTer.github.io/post/2024-09-06-dropbox/</guid>
+      <description>dropbox架构发展视频 发展过程 阶段一：单个server（1人） 阶段二：单server，单DB，单块存储（Amazon S3）（2人） 阶段三</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="LBT的 Blog">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="https://LBTer.github.io//img/michal-prucha-unsplash.jpg">
+    <meta property="twitter:image" content="https://LBTer.github.io//img/michal-prucha-unsplash.jpg" />
+    
+
+    
+    <meta name="title" content="20240904问题" />
+    <meta property="og:title" content="20240904问题" />
+    <meta property="twitter:title" content="20240904问题" />
+    
+
+    
+    <meta name="description" content="罗浩远，一个探索者  | 这里是 罗浩远 的博客，与你一起发现更大的世界。">
+    <meta property="og:description" content="罗浩远，一个探索者  | 这里是 罗浩远 的博客，与你一起发现更大的世界。" />
+    <meta property="twitter:description" content="罗浩远，一个探索者  | 这里是 罗浩远 的博客，与你一起发现更大的世界。" />
+    
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+
+    <meta name="keyword"  content="罗浩远, luohaoyuan, LBT Blog, 博客, 个人网站, 互联网, Web, 云原生, PaaS, Kubernetes, 微服务, Microservice">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>20240904问题 | LBT的博客 | LuoHaoyuan Blog</title>
+
+    <link rel="canonical" href="/post/2024-09-04-ai-question/">
+
+    
+    
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/css/hugo-theme-cleanwhite.min.css">
+
+    
+    <link rel="stylesheet" href="/css/zanshang.css">
+
+    
+    <link rel="stylesheet" href="/css/font-awesome.all.min.css">
+
+    
+    
+
+    
+    <script src="/js/jquery.min.js"></script>
+
+    
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+    
+    <script src="/js/lazysizes.min.js"></script>
+
+    
+    
+
+</head>
+
+
+
+
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">LBT的 Blog</a>
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">All Posts</a>
+                    </li>
+                    
+                        
+                        <li>
+                            <a href="/categories/ai/">ai</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/book/">book</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/grow/">grow</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/knows/">knows</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/life/">life</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/plan/">plan</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/tech/">tech</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/todo/">todo</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/watch/">watch</a>
+                        </li>
+                        
+                    
+                    
+		    
+                        <li><a href="/archive//">ARCHIVE</a></li>
+                    
+		            <li>
+                        <a href="/search"><i class="fa fa-search"></i></a>
+		           </li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/img/michal-prucha-unsplash.jpg')
+    }
+</style>
+
+<header class="intro-header" >
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/ai" title="ai">
+                            ai
+                        </a>
+                        
+                    </div>
+                    <h1>20240904问题</h1>
+                    <h2 class="subheading"></h2>
+                    <span class="meta">
+                        
+                            Posted by 
+                            
+                                LBT
+                             
+                            on 
+                            Wednesday, September 4, 2024
+                            
+                            
+                            
+                            
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+<article>
+    <div class="container">
+        <div class="row">
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                
+                <h2 id="qa1-在-go-语言中除了-clone_newuts-还有哪些其他系统调用标志">qa1: 在 Go 语言中，除了 <code>CLONE_NEWUTS</code> 还有哪些其他系统调用标志？</h2>
+<p>ans: \</p>
+<p>在 Go 语言中，<code>syscall</code> 包提供了对多种系统调用的访问，包括多种用于不同目的的标志。这些标志用于控制系统调用的行为。以下是一些常见的系统调用标志，它们在不同的系统调用中使用：</p>
+<ol>
+<li>
+<p><strong><code>CLONE_*</code> 系列标志（用于 <code>clone</code> 系统调用）</strong>：</p>
+<ul>
+<li><code>CLONE_NEWNS</code>：创建新的挂载命名空间。</li>
+<li><code>CLONE_NEWPID</code>：创建新的进程 ID 命名空间。</li>
+<li><code>CLONE_NEWNET</code>：创建新的网络命名空间。</li>
+<li><code>CLONE_NEWUSER</code>：创建新的用户命名空间（不同于 <code>CLONE_NEWUTS</code>）。</li>
+<li><code>CLONE_NEWCGROUP</code>：创建新的控制组（cgroup）命名空间。</li>
+</ul>
+</li>
+<li>
+<p><strong><code>O_*</code> 系列标志（用于文件操作相关的系统调用，如 <code>open</code>）</strong>：</p>
+<ul>
+<li><code>O_RDONLY</code>：只读方式打开文件。</li>
+<li><code>O_WRONLY</code>：只写方式打开文件。</li>
+<li><code>O_RDWR</code>：读写方式打开文件。</li>
+<li><code>O_CREAT</code>：如果文件不存在，则创建它。</li>
+<li><code>O_TRUNC</code>：截断文件，使其大小为 0。</li>
+<li><code>O_APPEND</code>：写入时追加到文件末尾。</li>
+</ul>
+</li>
+<li>
+<p><strong><code>SIG*</code> 系列标志（用于信号相关的系统调用，如 <code>kill</code>）</strong>：</p>
+<ul>
+<li><code>SIGINT</code>：发送中断信号。</li>
+<li><code>SIGKILL</code>：发送终止信号，无法被进程忽略或捕获。</li>
+<li><code>SIGSTOP</code>：停止进程执行。</li>
+</ul>
+</li>
+<li>
+<p><strong><code>MS_*</code> 系列标志（用于挂载操作，如 <code>mount</code>）</strong>：</p>
+<ul>
+<li><code>MS_RDONLY</code>：以只读方式挂载。</li>
+<li><code>MS_NOSUID</code>：忽略 SUID/SGID 权限。</li>
+<li><code>MS_NODEV</code>：不解析符号链接。</li>
+</ul>
+</li>
+<li>
+<p><strong><code>MMAP_*</code> 系列标志（用于内存映射相关的系统调用，如 <code>mmap</code>）</strong>：</p>
+<ul>
+<li><code>MAP_SHARED</code>：对映射区域的修改会反映到文件中。</li>
+<li><code>MAP_PRIVATE</code>：私有的复制-on-write 映射。</li>
+<li><code>MAP_ANONYMOUS</code>：匿名映射，不与任何文件关联。</li>
+</ul>
+</li>
+<li>
+<p><strong><code>SA_*</code> 系列标志（用于设置信号处理器的行为，如 <code>sigaction</code>）</strong>：</p>
+<ul>
+<li><code>SA_RESTART</code>：系统调用被信号中断后自动重启。</li>
+<li><code>SA_SIGINFO</code>：提供额外的信号信息。</li>
+</ul>
+</li>
+<li>
+<p><strong><code>SOCK_*</code> 系列标志（用于套接字相关的系统调用，如 <code>socket</code>）</strong>：</p>
+<ul>
+<li><code>SOCK_STREAM</code>：提供序列化的、可靠的、双向连接的字节流。</li>
+<li><code>SOCK_DGRAM</code>：提供数据报服务。</li>
+</ul>
+</li>
+<li>
+<p><strong><code>TCP_*</code> 系列标志（用于 TCP 套接字相关的系统调用，如 <code>setsockopt</code>）</strong>：</p>
+<ul>
+<li><code>TCP_NODELAY</code>：禁用 Nagle 算法，减少延迟。</li>
+</ul>
+</li>
+</ol>
+<p>这些标志在不同的系统调用中有不同的作用，它们使得系统调用的行为可以根据应用程序的需求进行精细控制。在使用这些标志时，应该参考相应的系统调用文档，以确保正确使用。</p>
+<h2 id="qa2-nosql适合存储用户数据吗">qa2: nosql适合存储用户数据吗</h2>
+<p>ans2: <br>
+NoSQL数据库，也称为非关系型数据库，适合存储用户数据，尤其是当数据模型不需要严格的关系型结构或者需要高度的可扩展性时。NoSQL数据库有多种类型，包括键值存储、文档数据库、列族数据库和图形数据库，每种类型都有其特定的使用场景和优势。</p>
+<p>以下是NoSQL数据库存储用户数据的一些优势：</p>
+<ol>
+<li>
+<p><strong>灵活性</strong>：</p>
+<ul>
+<li>NoSQL数据库通常对数据模式更加灵活，可以轻松地存储和查询各种结构的用户数据。</li>
+</ul>
+</li>
+<li>
+<p><strong>可扩展性</strong>：</p>
+<ul>
+<li>许多NoSQL数据库设计用于水平扩展，可以通过增加更多的服务器来处理更大的数据量和更高的并发请求。</li>
+</ul>
+</li>
+<li>
+<p><strong>高性能</strong>：</p>
+<ul>
+<li>NoSQL数据库通常提供快速的读写性能，这对于需要快速响应的用户应用程序非常有用。</li>
+</ul>
+</li>
+<li>
+<p><strong>多样化的数据模型</strong>：</p>
+<ul>
+<li>不同类型的NoSQL数据库支持不同的数据模型，可以根据用户数据的特点选择合适的数据库类型。</li>
+</ul>
+</li>
+<li>
+<p><strong>灵活的查询</strong>：</p>
+<ul>
+<li>虽然NoSQL数据库的查询语言可能不像SQL那样成熟，但许多NoSQL数据库提供了丰富的查询功能。</li>
+</ul>
+</li>
+<li>
+<p><strong>成本效益</strong>：</p>
+<ul>
+<li>某些NoSQL数据库可以运行在普通的硬件上，有助于降低成本。</li>
+</ul>
+</li>
+<li>
+<p><strong>容错性</strong>：</p>
+<ul>
+<li>许多NoSQL数据库提供了良好的容错机制，能够在节点故障的情况下继续提供服务。</li>
+</ul>
+</li>
+</ol>
+<p>然而，使用NoSQL数据库存储用户数据也有一些挑战和考虑因素：</p>
+<ol>
+<li>
+<p><strong>事务支持</strong>：</p>
+<ul>
+<li>传统的NoSQL数据库可能不支持ACID事务，不过一些现代NoSQL数据库正在增强这方面的能力。</li>
+</ul>
+</li>
+<li>
+<p><strong>数据一致性</strong>：</p>
+<ul>
+<li>NoSQL数据库可能提供最终一致性或强一致性模型，需要根据应用需求选择合适的一致性级别。</li>
+</ul>
+</li>
+<li>
+<p><strong>安全性</strong>：</p>
+<ul>
+<li>需要确保NoSQL数据库的安全性，包括数据加密、访问控制和安全审计。</li>
+</ul>
+</li>
+<li>
+<p><strong>备份和恢复</strong>：</p>
+<ul>
+<li>需要考虑NoSQL数据库的备份和恢复策略，确保数据的持久性和可恢复性。</li>
+</ul>
+</li>
+<li>
+<p><strong>查询语言</strong>：</p>
+<ul>
+<li>NoSQL数据库的查询语言可能与SQL不同，需要学习并适应。</li>
+</ul>
+</li>
+<li>
+<p><strong>数据迁移</strong>：</p>
+<ul>
+<li>如果从关系型数据库迁移到NoSQL数据库，需要考虑数据迁移的复杂性和成本。</li>
+</ul>
+</li>
+</ol>
+<p>总的来说，NoSQL数据库适合存储用户数据，尤其是当应用程序能够利用其灵活性、可扩展性和高性能的特点时。在选择NoSQL数据库时，应仔细评估业务需求、数据访问模式和长期维护策略。</p>
+
+
+                
+
+                
+                <hr>
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/post/2024-09-04-build-own-x/" data-toggle="tooltip" data-placement="top" title="build your x">&larr;
+                            Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/post/2024-09-06-dropbox/" data-toggle="tooltip" data-placement="top" title="系统设计案例">Next
+                            Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+                
+
+                
+
+
+            </div>
+
+            
+            
+            <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                <div class="side-catalog">
+                    <hr class="hidden-sm hidden-xs">
+                    <h5>
+                        <a class="catalog-toggle" href="#">CATALOG</a>
+                    </h5>
+                    <ul class="catalog-body"></ul>
+                </div>
+            </div>
+            
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                
+                
+                <section>
+                    <hr class="hidden-sm hidden-xs">
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                        
+                        
+                        
+                        <a href="/tags/ai" title="ai">
+                            ai
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/project" title="project">
+                            project
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/redis" title="redis">
+                            redis
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/resume" title="resume">
+                            resume
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/tag1" title="tag1">
+                            tag1
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/tag2" title="tag2">
+                            tag2
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                </section>
+                
+
+                
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">                  
+                    
+                    <li>
+                        <a href="mailto:1308340194@qq.com">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+                    
+                    
+                    
+                    
+
+		            
+                    
+                    <li>
+                        <a target="_blank" href="/img/erweima.jpg">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-weixin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		            
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/LBTer">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		            
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            
+           
+             </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; LBT的 Blog 2024
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script>
+    function loadAsync(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        loadAsync("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+<script type="text/javascript">
+    function generateCatalog(selector) {
+
+        
+        
+        
+        
+            _containerSelector = 'div.post-container'
+        
+
+        
+        var P = $(_containerSelector), a, n, t, l, i, c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+
+        
+        $(selector).html('')
+
+        
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#" + $(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
+            l = $('<li class="' + n + '_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;
+    }
+
+    generateCatalog(".catalog-body");
+
+    
+    $(".catalog-toggle").click((function (e) {
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    
+
+
+    loadAsync("\/js\/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
+
+
+
+
+
+
+</body>
+</html>

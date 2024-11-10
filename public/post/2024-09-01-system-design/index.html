@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="LBT的 Blog">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="https://LBTer.github.io//img/michal-prucha-unsplash.jpg">
+    <meta property="twitter:image" content="https://LBTer.github.io//img/michal-prucha-unsplash.jpg" />
+    
+
+    
+    <meta name="title" content="《System Design Interview》解读" />
+    <meta property="og:title" content="《System Design Interview》解读" />
+    <meta property="twitter:title" content="《System Design Interview》解读" />
+    
+
+    
+    <meta name="description" content="罗浩远，一个探索者  | 这里是 罗浩远 的博客，与你一起发现更大的世界。">
+    <meta property="og:description" content="罗浩远，一个探索者  | 这里是 罗浩远 的博客，与你一起发现更大的世界。" />
+    <meta property="twitter:description" content="罗浩远，一个探索者  | 这里是 罗浩远 的博客，与你一起发现更大的世界。" />
+    
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+
+    <meta name="keyword"  content="罗浩远, luohaoyuan, LBT Blog, 博客, 个人网站, 互联网, Web, 云原生, PaaS, Kubernetes, 微服务, Microservice">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>《System Design Interview》解读 | LBT的博客 | LuoHaoyuan Blog</title>
+
+    <link rel="canonical" href="/post/2024-09-01-system-design/">
+
+    
+    
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/css/hugo-theme-cleanwhite.min.css">
+
+    
+    <link rel="stylesheet" href="/css/zanshang.css">
+
+    
+    <link rel="stylesheet" href="/css/font-awesome.all.min.css">
+
+    
+    
+
+    
+    <script src="/js/jquery.min.js"></script>
+
+    
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+    
+    <script src="/js/lazysizes.min.js"></script>
+
+    
+    
+
+</head>
+
+
+
+
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">LBT的 Blog</a>
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">All Posts</a>
+                    </li>
+                    
+                        
+                        <li>
+                            <a href="/categories/ai/">ai</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/book/">book</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/grow/">grow</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/knows/">knows</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/life/">life</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/plan/">plan</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/tech/">tech</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/todo/">todo</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/watch/">watch</a>
+                        </li>
+                        
+                    
+                    
+		    
+                        <li><a href="/archive//">ARCHIVE</a></li>
+                    
+		            <li>
+                        <a href="/search"><i class="fa fa-search"></i></a>
+		           </li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/img/michal-prucha-unsplash.jpg')
+    }
+</style>
+
+<header class="intro-header" >
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/sytem-design" title="sytem design">
+                            sytem design
+                        </a>
+                        
+                    </div>
+                    <h1>《System Design Interview》解读</h1>
+                    <h2 class="subheading"></h2>
+                    <span class="meta">
+                        
+                            Posted by 
+                            
+                                LBT
+                             
+                            on 
+                            Sunday, September 1, 2024
+                            
+                            
+                            
+                            
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+<article>
+    <div class="container">
+        <div class="row">
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                
+                <h2 id="1全书架构">1、全书架构</h2>
+<p>全书分为两部分，第一部分是前三章，分别为：一个服务是怎么发展的、一些基本的数据估计、系统设计面试步骤。 <br>
+github上有全书的<a href="https://github.com/Admol/SystemDesign/tree/main">中文翻译</a>。</p>
+<h2 id="2基础部分">2、基础部分</h2>
+<h3 id="21-架构从零到百万">2.1 架构从零到百万</h3>
+<pre><code>客户端--&gt;DNS
+|
+服务端
+</code></pre>
+<p>加入数据库</p>
+<pre><code>客户端--&gt;DNS
+|
+服务端--&gt;DB
+</code></pre>
+<p>考虑垂直扩展（机器上配置）/水平扩展（加机器），明显水平扩展更加合理。 <br>
+水平扩展需要增加负载均衡</p>
+<pre><code>    客户端--&gt;DNS
+      |
+      LB
+    |    |
+ 服务端1 服务端2
+</code></pre>
+<p>数据库复制加入（更好的性能、容灾、高可用）</p>
+<pre><code>--------服务端--------------------------
+|                   |         |        |
+|write              |read     |read    |read
+|        -------DB slave 1    |        |
+DB Master-----------------DB slave 2   |
+         --------------------------DB slave 3
+</code></pre>
+<p>加入数据库复制后的架构</p>
+<pre><code>      客户端--&gt;DNS
+        |
+        LB
+      |    |
+   服务端1 服务端2
+write| \ / |read
+     |  X  |
+    DBM   DBS
+</code></pre>
+<p>加入缓存（减少动态数据的响应时间），新引入一致性问题（制定过期策略）
+加入CDN（减少静态数据的响应时间）</p>
+<p>架构如下：</p>
+<pre><code>DNS&lt;--客户端--&gt;CDN
+        |
+        LB
+      |    |
+   服务端1 服务端2
+     | \ / |   \所有服务器访问
+     |  X  |    \
+    DBM   DBS   Cache
+</code></pre>
+<p>水平扩展无状态的web服务</p>
+<p>数据中心，将服务器、DB和cache打包分别部署到不同的地区，使用LB将流量导向不同的区域</p>
+<p>引入消息队列（解藕不同组件）</p>
+<p>引入日志、观测数据、CI/CD</p>
+<p>考虑数据库扩展（分库分表）</p>
+<h3 id="22-计算机基本数据估计">2.2 计算机基本数据估计</h3>
+<p>2的次方
+
+  <img src="/img/system-design-interview/table2-1.png" alt="">
+
+
+延迟数据
+
+  <img src="/img/system-design-interview/table2-2.png" alt="">
+
+
+延迟数据量化
+
+  <img src="/img/system-design-interview/figure2-1.png" alt="">
+
+
+可用性数据
+
+  <img src="/img/system-design-interview/table2-3.png" alt="">
+
+</p>
+<h3 id="23-系统设计面试框架">2.3 系统设计面试框架</h3>
+<ul>
+<li>第1步 ：了解问题并确定设计范围</li>
+<li>第2步：提出高层次的设计方案并获得认同</li>
+<li>第3步：深入设计</li>
+<li>第4步：总结</li>
+</ul>
+<h2 id="3案例部分">3、案例部分</h2>
+<h3 id="31-限流器设计">3.1 限流器设计</h3>
+<p>明确系统要求 \
+可以直接在API网关中实现 \
+多种限流算法： \</p>
+<ul>
+<li>令牌桶
+实现简单、内存占用忽略不计
+允许短时间内突发</li>
+<li>漏桶
+队列中有旧请求时突发流量之后的数据处理速率收到限制</li>
+<li>固定窗口计数器
+窗口边缘速率高于指定速率</li>
+<li>滑动窗口日志
+速率准确
+但是消耗大量内存</li>
+<li>滑动窗口计数器
+内存占用低
+不够严格</li>
+</ul>
+<p>分布式环境下的设计todo</p>
+<h3 id="32-一致性hash设计">3.2 一致性hash设计</h3>
+<p>基本步骤如下：\</p>
+<ul>
+<li>使用均匀分布的哈希函数将服务器和键映射到环上。</li>
+<li>要想知道一个键被映射到哪个服务器，从键的位置顺时针查找，直到找到环上的第一个服务器。
+需要添加虚拟节点，解决的分布不均匀问题（hash不均匀导致或增减服务器导致的）。</li>
+</ul>
+<h3 id="33-k-v存储设计">3.3 k-v存储设计</h3>
+<p>单一服务器做kv存储，使用了数据压缩和降冷后，基本已无优化空间，需要分布式。 <br>
+较为复杂的一个底层系统，可以自己研究redis入手。 <br>
+本章内容</p>
+<ul>
+<li>数据分区</li>
+<li>数据复制</li>
+<li>一致性</li>
+<li>不一致解决方案</li>
+<li>故障处理</li>
+<li>系统架构图</li>
+<li>写入路径</li>
+<li>读取路径</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>目标/问题</th>
+<th>技术</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>存储大数据的能力</td>
+<td>使用一致性哈希将负载分散到多个服务器上</td>
+</tr>
+<tr>
+<td>高可用性读取</td>
+<td>数据复制 多数据中心设置</td>
+</tr>
+<tr>
+<td>高可用性写入</td>
+<td>使用向量时钟（vector clocks）进行版本控制和冲突解决</td>
+</tr>
+<tr>
+<td>数据分区</td>
+<td>一致性哈希</td>
+</tr>
+<tr>
+<td>增量可扩展性</td>
+<td>一致性哈希</td>
+</tr>
+<tr>
+<td>异质性（heterogeneity）</td>
+<td>一致性哈希</td>
+</tr>
+<tr>
+<td>处理临时性故障</td>
+<td>草率仲裁（sloppy quorum）和暗示切换（hinted handoff）</td>
+</tr>
+<tr>
+<td>处理永久性故障</td>
+<td>Merkle 树</td>
+</tr>
+<tr>
+<td>处理数据中心中断</td>
+<td>跨数据中心复制</td>
+</tr>
+</tbody>
+</table>
+<h3 id="34-唯一id生成器设计">3.4 唯一ID生成器设计</h3>
+<ul>
+<li>单一数据库生成</li>
+<li>雪花算法</li>
+</ul>
+<p>复杂度上来了选雪花，41位时间戳大概用69年
+
+  <img src="/img/system-design-interview/figure7-5.png" alt="">
+
+</p>
+<h3 id="35-短链系统设计">3.5 短链系统设计</h3>
+<p>两个功能</p>
+<ul>
+<li>获取短链</li>
+<li>提供重定向</li>
+</ul>
+<p>哈希+碰撞解决 vs 唯一id生成器+base62</p>
+<h3 id="36-爬虫系统设计">3.6 爬虫系统设计</h3>
+<p>架构如下：
+
+  <img src="/img/system-design-interview/figure9-2.png" alt="">
+
+</p>
+<ul>
+<li>Seed URLs
+<ul>
+<li>爬虫的起点</li>
+</ul>
+</li>
+<li>URL Frontier</li>
+<li>HTML Downloader</li>
+<li>DNS Resolver</li>
+<li>Content Parser</li>
+<li>Content Seen</li>
+<li>Content Storage</li>
+<li>URL Extractor</li>
+<li>URL Filter
+todo</li>
+</ul>
+<h3 id="37-通知系统设计">3.7 通知系统设计</h3>
+<p>最终设计，包含错误重试、速率设置等
+
+  <img src="/img/system-design-interview/figure10-14.png" alt="">
+
+</p>
+<h3 id="38-信息推送系统设计">3.8 信息推送系统设计</h3>
+<h3 id="39-聊天系统设计">3.9 聊天系统设计</h3>
+<h3 id="310-搜索补全系统设计">3.10 搜索补全系统设计</h3>
+<h3 id="311-视频网站设计youtube">3.11 视频网站设计（youtube）</h3>
+<h3 id="312-网盘设计google网盘">3.12 网盘设计（google网盘）</h3>
+
+
+                
+
+                
+                <hr>
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/post/2024-08-30-ai-question/" data-toggle="tooltip" data-placement="top" title="20240830问题">&larr;
+                            Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/post/2024-09-02-network/" data-toggle="tooltip" data-placement="top" title="网络协议知识一览">Next
+                            Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+                
+
+                
+
+
+            </div>
+
+            
+            
+            <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                <div class="side-catalog">
+                    <hr class="hidden-sm hidden-xs">
+                    <h5>
+                        <a class="catalog-toggle" href="#">CATALOG</a>
+                    </h5>
+                    <ul class="catalog-body"></ul>
+                </div>
+            </div>
+            
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                
+                
+                <section>
+                    <hr class="hidden-sm hidden-xs">
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                        
+                        
+                        
+                        <a href="/tags/ai" title="ai">
+                            ai
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/project" title="project">
+                            project
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/redis" title="redis">
+                            redis
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/resume" title="resume">
+                            resume
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/tag1" title="tag1">
+                            tag1
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/tag2" title="tag2">
+                            tag2
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                </section>
+                
+
+                
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">                  
+                    
+                    <li>
+                        <a href="mailto:1308340194@qq.com">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+                    
+                    
+                    
+                    
+
+		            
+                    
+                    <li>
+                        <a target="_blank" href="/img/erweima.jpg">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-weixin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		            
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/LBTer">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		            
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            
+           
+             </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; LBT的 Blog 2024
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script>
+    function loadAsync(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        loadAsync("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+<script type="text/javascript">
+    function generateCatalog(selector) {
+
+        
+        
+        
+        
+            _containerSelector = 'div.post-container'
+        
+
+        
+        var P = $(_containerSelector), a, n, t, l, i, c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+
+        
+        $(selector).html('')
+
+        
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#" + $(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
+            l = $('<li class="' + n + '_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;
+    }
+
+    generateCatalog(".catalog-body");
+
+    
+    $(".catalog-toggle").click((function (e) {
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    
+
+
+    loadAsync("\/js\/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="LBT的 Blog">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="http://localhost:1313//img/michal-prucha-unsplash.jpg">
+    <meta property="twitter:image" content="http://localhost:1313//img/michal-prucha-unsplash.jpg" />
+    
+
+    
+    <meta name="title" content="redis概念学习" />
+    <meta property="og:title" content="redis概念学习" />
+    <meta property="twitter:title" content="redis概念学习" />
+    
+
+    
+    <meta name="description" content="罗浩远，一个探索者  | 这里是 罗浩远 的博客，与你一起发现更大的世界。">
+    <meta property="og:description" content="罗浩远，一个探索者  | 这里是 罗浩远 的博客，与你一起发现更大的世界。" />
+    <meta property="twitter:description" content="罗浩远，一个探索者  | 这里是 罗浩远 的博客，与你一起发现更大的世界。" />
+    
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+
+    <meta name="keyword"  content="罗浩远, luohaoyuan, LBT Blog, 博客, 个人网站, 互联网, Web, 云原生, PaaS, Kubernetes, 微服务, Microservice">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>redis概念学习 | LBT的博客 | LuoHaoyuan Blog</title>
+
+    <link rel="canonical" href="/post/2024-08-29-redis-operate/">
+
+    
+    
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/css/hugo-theme-cleanwhite.min.css">
+
+    
+    <link rel="stylesheet" href="/css/zanshang.css">
+
+    
+    <link rel="stylesheet" href="/css/font-awesome.all.min.css">
+
+    
+    
+
+    
+    <script src="/js/jquery.min.js"></script>
+
+    
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+    
+    <script src="/js/lazysizes.min.js"></script>
+
+    
+    
+
+</head>
+
+
+
+
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">LBT的 Blog</a>
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">All Posts</a>
+                    </li>
+                    
+                        
+                        <li>
+                            <a href="/categories/grow/">grow</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/plan/">plan</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/tech/">tech</a>
+                        </li>
+                        
+                    
+                    
+		    
+                        <li><a href="/archive//">ARCHIVE</a></li>
+                    
+		            <li>
+                        <a href="/search"><i class="fa fa-search"></i></a>
+		           </li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/img/michal-prucha-unsplash.jpg')
+    }
+</style>
+
+<header class="intro-header" >
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/redis" title="redis">
+                            redis
+                        </a>
+                        
+                        <a class="tag" href="/tags/operate" title="operate">
+                            operate
+                        </a>
+                        
+                    </div>
+                    <h1>redis概念学习</h1>
+                    <h2 class="subheading">快速回顾redis知识</h2>
+                    <span class="meta">
+                        
+                            Posted by 
+                            
+                                     &#34;LBT&#34;
+                             
+                            on 
+                            Thursday, August 29, 2024
+                            
+                            
+                            
+                            
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+<article>
+    <div class="container">
+        <div class="row">
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                
+                <h2 id="1数据结构">1、数据结构</h2>
+<p>redis的诞生也有较久的时间，国内已有经典入门书籍<a href="https://redisbook.readthedocs.io/en/latest/">《redis设计与实现》</a>，本篇章中的图片来自相应网站</p>
+<blockquote>
+<p>学习redis的设计理念可以从<a href="https://redisbook.readthedocs.io/en/latest/">《redis设计与实现》</a>入手，配合<a href="https://github.com/huangzworks/redis-3.0-annotated">redis3.0源码</a>使用</p>
+</blockquote>
+<p>本书从3个方面全面解析redis初期的源码：数据结构与对象、单机数据库的实现、多机数据库的实现和独立功能的实现四部分，开发基本只需要，多机部分和独立功能部分完全可跳过</p>
+<h3 id="11-对象理解">1.1 对象（理解）</h3>
+<blockquote>
+<p>redis的数据设计为 <strong>对象 -&gt; 数据结构</strong> 两层，用户直接操作 <strong>对象</strong>，redis决定用何种 <strong>数据结构</strong>。</p>
+</blockquote>
+<p>redis的主要数据结构有，简单动态字符串（SDS）、双端链表、字典、压缩列表、整数集合等。<br>
+redis其实没有直接使用这些数据结构，而是围绕这些数据结构创建了一个对象系统，详情看<a href="https://redisbook.readthedocs.io/en/latest/datatype/object.html#redisobject-redis">redis对象</a>。<br>
+<strong>对象的类型</strong></p>
+<table>
+<thead>
+<tr>
+<th>类型常量</th>
+<th>对象的名称</th>
+<th>TYPE 命令输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>REDIS_STRING</td>
+<td>字符串对象</td>
+<td>&ldquo;string&rdquo;</td>
+</tr>
+<tr>
+<td>REDIS_LIST</td>
+<td>列表对象</td>
+<td>&ldquo;list&rdquo;</td>
+</tr>
+<tr>
+<td>REDIS_HASH</td>
+<td>哈希对象</td>
+<td>&ldquo;hash&rdquo;</td>
+</tr>
+<tr>
+<td>REDIS_SET</td>
+<td>集合对象</td>
+<td>&ldquo;set&rdquo;</td>
+</tr>
+<tr>
+<td>REDIS_ZSET</td>
+<td>有序对象集合</td>
+<td>&ldquo;zset&rdquo;</td>
+</tr>
+</tbody>
+</table>
+<p>redis对象结构如下:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#ff79c6">typedef</span> <span style="color:#ff79c6">struct</span> redisObject {
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// 类型
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#8be9fd">unsigned</span> <span style="color:#8be9fd;font-style:italic">type</span>:<span style="color:#bd93f9">4</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// 对齐位
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#8be9fd">unsigned</span> <span style="color:#8be9fd;font-style:italic">notused</span>:<span style="color:#bd93f9">2</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// 编码方式
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#8be9fd">unsigned</span> <span style="color:#8be9fd;font-style:italic">encoding</span>:<span style="color:#bd93f9">4</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// LRU 时间（相对于 server.lruclock）
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#8be9fd">unsigned</span> <span style="color:#8be9fd;font-style:italic">lru</span>:<span style="color:#bd93f9">22</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// 引用计数
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#8be9fd">int</span> refcount;
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// 指向对象的值
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#8be9fd">void</span> <span style="color:#ff79c6">*</span>ptr;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>} robj;
+</span></span></code></pre></div><p>以上encoding属性记录了对象的编码，即使用什么数据结构作为对象的底层实现。</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>编码</th>
+<th>对象</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>REDIS_STRING</td>
+<td>REDIS_ENCODING_INT（long类型整数）</td>
+<td>使用整数值实现的字符串对象</td>
+</tr>
+<tr>
+<td>REDIS_STRING</td>
+<td>REDIS_ENCODING_EMBSTR（embstr编码的SDS）</td>
+<td>使用embstr编码的SDS实现的字符串对象</td>
+</tr>
+<tr>
+<td>REDIS_STRING</td>
+<td>REDIS_ENCODING_RAW（SDS）</td>
+<td>使用SDS实现的字符串对象</td>
+</tr>
+<tr>
+<td>REDIS_LIST</td>
+<td>REDIS_ENCODING_ZIPLIST（压缩列表）</td>
+<td>使用压缩列表实现的列表对象</td>
+</tr>
+<tr>
+<td>REDIS_LIST</td>
+<td>REDIS_ENCODING_LINKEDLIST（双端链表）</td>
+<td>使用双端链表实现的列表对象</td>
+</tr>
+<tr>
+<td>REDIS_HASH</td>
+<td>REDIS_ENCODING_ZIPLIST（压缩列表）</td>
+<td>使用压缩列表实现的哈希对象</td>
+</tr>
+<tr>
+<td>REDIS_HASH</td>
+<td>REDIS_ENCODING_HT（字典）</td>
+<td>使用字典实现的哈希对象</td>
+</tr>
+<tr>
+<td>REDIS_SET</td>
+<td>REDIS_ENCODING_INTSET（整数集合）</td>
+<td>使用整数集合实现的集合对象</td>
+</tr>
+<tr>
+<td>REDIS_SET</td>
+<td>REDIS_ENCODING_HT（字典）</td>
+<td>使用字典实现的集合对象</td>
+</tr>
+<tr>
+<td>REDIS_ZSET</td>
+<td>REDIS_ENCODING_ZIPLIST（压缩列表）</td>
+<td>使用压缩列表实现的有序集合对象</td>
+</tr>
+<tr>
+<td>REDIS_ZSET</td>
+<td>REDIS_ENCODING_SKIPLIST（跳跃表和字典）</td>
+<td>使用跳表和字典实现的有序集合对象</td>
+</tr>
+</tbody>
+</table>
+<p>对象和类型的关系如下图，其中每种对象都有多种编码，满足某对象的特定条件时，会触发对象编码的转换，以适应不同场景:
+
+  <img src="/img/redis/redis-object.svg" alt="">
+
+
+掌握到这里差不多了，延伸信息：命令的类型和多态（同一个命令可用于不同类型）、对象共享（通过预分配一些常见的值对象，并在多个数据结构之间共享这些对象）、引用计数和对象销毁（没错c都是自己实现的回收）</p>
+<h3 id="12-简单动态字符串sds">1.2 简单动态字符串（SDS）</h3>
+<h4 id="121-用途">1.2.1 用途</h4>
+<ul>
+<li>实现字符串对象（StringObject）；</li>
+<li>在 Redis 程序内部用作 char* 类型的替代品；</li>
+</ul>
+<h4 id="122-操作">1.2.2 操作</h4>
+<pre tabindex="0"><code># 以下命令创建了一个新的数据库键值对， 这个键值对的键和值都是字符串对象， 它们都包含一个 sds 值
+redis&gt; SET book &#34;Mastering C++ in 21 days&#34;
+OK
+
+redis&gt; GET book
+&#34;Mastering C++ in 21 days&#34;
+</code></pre><pre tabindex="0"><code># 以下命令创建了另一个键值对， 它的键是字符串对象， 而值则是一个集合对象
+redis&gt; SADD nosql &#34;Redis&#34; &#34;MongoDB&#34; &#34;Neo4j&#34;
+(integer) 3
+
+redis&gt; SMEMBERS nosql
+1) &#34;Neo4j&#34;
+2) &#34;Redis&#34;
+3) &#34;MongoDB&#34;
+</code></pre><h4 id="123-深入">1.2.3 深入</h4>
+<p>定义如下：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#ff79c6">typedef</span> <span style="color:#8be9fd">char</span> <span style="color:#ff79c6">*</span>sds;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">struct</span> sdshdr {
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// buf 已占用长度
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#8be9fd">int</span> len;
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// buf 剩余可用长度
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#8be9fd">int</span> free;
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// 实际保存字符串数据的地方
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#8be9fd">char</span> buf[];
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><p>以上结构有几点优势：</p>
+<ul>
+<li>1、直接获取长度</li>
+<li>2、不会造成缓冲区溢出，API安全</li>
+<li>3、修改字符串长度N次<strong>最多</strong>只需要N次内存重新分配</li>
+<li>4、可以保存文本或者二进制数据</li>
+<li>5、可以用部分&lt;string.h&gt;库中的函数</li>
+</ul>
+<h3 id="13-双端链表">1.3 双端链表</h3>
+<h4 id="131-用途">1.3.1 用途</h4>
+<ul>
+<li>作为 Redis 列表类型的底层实现之一；</li>
+<li>作为通用数据结构，被其他功能模块所使用；</li>
+</ul>
+<h4 id="132-操作">1.3.2 操作</h4>
+<pre tabindex="0"><code>redis&gt; RPUSH brands Apple Microsoft Google
+(integer) 3
+
+redis&gt; LPOP brands
+&#34;Apple&#34;
+
+redis&gt; LLEN brands
+(integer) 2
+
+redis&gt; LRANGE brands 0 -1
+1) &#34;Microsoft&#34;
+2) &#34;Google&#34;
+</code></pre><h4 id="133-深入">1.3.3 深入</h4>
+<blockquote>
+<p>Redis 列表使用两种数据结构作为底层实现：<br>
+1、双端链表<br>
+2、压缩列表<br>
+因为双端链表占用的内存比压缩列表要多， 所以当创建新的列表键时， 列表会优先考虑使用压缩列表作为底层实现， 并且在有需要的时候， 才从压缩列表实现转换到双端链表实现。</p>
+</blockquote>
+<p>结构定义：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#6272a4">// 双端链表节点
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">typedef</span> <span style="color:#ff79c6">struct</span> listNode {
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// 前驱节点
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">struct</span> listNode <span style="color:#ff79c6">*</span>prev;
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// 后继节点
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">struct</span> listNode <span style="color:#ff79c6">*</span>next;
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// 值
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#8be9fd">void</span> <span style="color:#ff79c6">*</span>value;
+</span></span><span style="display:flex;"><span>} listNode;
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">// 双端链表本身
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">typedef</span> <span style="color:#ff79c6">struct</span> list {
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// 表头指针
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    listNode <span style="color:#ff79c6">*</span>head;
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// 表尾指针
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    listNode <span style="color:#ff79c6">*</span>tail;
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// 节点数量
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#8be9fd">unsigned</span> <span style="color:#8be9fd">long</span> len;
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// 复制函数
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#8be9fd">void</span> <span style="color:#ff79c6">*</span>(<span style="color:#ff79c6">*</span>dup)(<span style="color:#8be9fd">void</span> <span style="color:#ff79c6">*</span>ptr);
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// 释放函数
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#8be9fd">void</span> (<span style="color:#ff79c6">*</span>free)(<span style="color:#8be9fd">void</span> <span style="color:#ff79c6">*</span>ptr);
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// 比对函数
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#8be9fd">int</span> (<span style="color:#ff79c6">*</span>match)(<span style="color:#8be9fd">void</span> <span style="color:#ff79c6">*</span>ptr, <span style="color:#8be9fd">void</span> <span style="color:#ff79c6">*</span>key);
+</span></span><span style="display:flex;"><span>} list;
+</span></span></code></pre></div><p>
+  <img src="/img/redis/list.svg" alt="">
+
+
+双端链表本身的迭代器listIter这里不展示了，包括下一节点和当前方向。</p>
+<h3 id="14-字典">1.4 字典</h3>
+<h4 id="141-用途">1.4.1 用途</h4>
+<ul>
+<li>实现数据库键空间（key space）</li>
+<li>用作 Hash 类型键的底层实现之一
+redis中的数据库操作都依赖于字典类型，如<strong>DBSIZE、FLUSHDB、RANDOMKEY</strong>等</li>
+</ul>
+<h4 id="142-操作">1.4.2 操作</h4>
+<pre tabindex="0"><code>redis&gt; HSET book name &#34;The design and implementation of Redis&#34;
+(integer) 1
+
+redis&gt; HSET book type &#34;source code analysis&#34;
+(integer) 1
+
+redis&gt; HSET book release-date &#34;2013.3.8&#34;
+(integer) 1
+
+redis&gt; HGETALL book
+1) &#34;name&#34;
+2) &#34;The design and implementation of Redis&#34;
+3) &#34;type&#34;
+4) &#34;source code analysis&#34;
+5) &#34;release-date&#34;
+6) &#34;2013.3.8&#34;
+</code></pre><h4 id="143-深入">1.4.3 深入</h4>
+<blockquote>
+<p>Redis 的 Hash 类型键使用以下两种数据结构作为底层实现:<br>
+1、字典<br>
+2、压缩列表<br>
+因为压缩列表比字典更节省内存， 所以程序在创建新 Hash 键时， 默认使用压缩列表作为底层实现， 当有需要时， 程序才会将底层实现从压缩列表转换到字典。</p>
+</blockquote>
+<p>结构如下：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#6272a4">/*
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"> * 字典
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"> *
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"> * 每个字典使用两个哈希表，用于实现渐进式 rehash
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"> */</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">typedef</span> <span style="color:#ff79c6">struct</span> dict {
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// 特定于类型的处理函数
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    dictType <span style="color:#ff79c6">*</span>type;
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// 类型处理函数的私有数据
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#8be9fd">void</span> <span style="color:#ff79c6">*</span>privdata;
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// 哈希表（2 个）
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    dictht ht[<span style="color:#bd93f9">2</span>];
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// 记录 rehash 进度的标志，值为 -1 表示 rehash 未进行
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#8be9fd">int</span> rehashidx;
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// 当前正在运作的安全迭代器数量
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#8be9fd">int</span> iterators;
+</span></span><span style="display:flex;"><span>} dict;
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">/*
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"> * 哈希表
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"> */</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">typedef</span> <span style="color:#ff79c6">struct</span> dictht {
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// 哈希表节点指针数组（俗称桶，bucket）
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    dictEntry <span style="color:#ff79c6">**</span>table;
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// 指针数组的大小
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#8be9fd">unsigned</span> <span style="color:#8be9fd">long</span> size;
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// 指针数组的长度掩码，用于计算索引值
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#8be9fd">unsigned</span> <span style="color:#8be9fd">long</span> sizemask;
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// 哈希表现有的节点数量
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#8be9fd">unsigned</span> <span style="color:#8be9fd">long</span> used;
+</span></span><span style="display:flex;"><span>} dictht;
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">/*
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"> * 哈希表节点
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"> */</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">typedef</span> <span style="color:#ff79c6">struct</span> dictEntry {
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// 键
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#8be9fd">void</span> <span style="color:#ff79c6">*</span>key;
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// 值
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">union</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#8be9fd">void</span> <span style="color:#ff79c6">*</span>val;
+</span></span><span style="display:flex;"><span>        <span style="color:#8be9fd">uint64_t</span> u64;
+</span></span><span style="display:flex;"><span>        <span style="color:#8be9fd">int64_t</span> s64;
+</span></span><span style="display:flex;"><span>    } v;
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// 链往后继节点
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">struct</span> dictEntry <span style="color:#ff79c6">*</span>next;
+</span></span><span style="display:flex;"><span>} dictEntry;
+</span></span></code></pre></div><p>
+  <img src="/img/redis/dict.svg" alt="">
+
+
+redis的hash使用桶+链表实现，更多细节看<a href="https://redisbook.readthedocs.io/en/latest/internal-datastruct/dict.html">redis的哈希解读</a></p>
+<h3 id="15-跳跃表">1.5 跳跃表</h3>
+<h4 id="151-用途">1.5.1 用途</h4>
+<p>和字典、链表或者字符串这几种在 Redis 中大量使用的数据结构不同， 跳跃表在 Redis 的唯一作用， 就是实现有序集数据类型。<br>
+跳跃表将指向有序集的 score 值和 member 域的指针作为元素， 并以 score 值为索引， 对有序集元素进行排序。</p>
+<h4 id="152-操作">1.5.2 操作</h4>
+<pre tabindex="0"><code>redis&gt; ZADD s 6 x 10 y 15 z
+(integer) 3
+
+redis&gt; ZRANGE s 0 -1 WITHSCORES
+1) &#34;x&#34;
+2) &#34;6&#34;
+3) &#34;y&#34;
+4) &#34;10&#34;
+5) &#34;z&#34;
+6) &#34;15&#34;
+</code></pre><h4 id="153-深入">1.5.3 深入</h4>
+<p>结构如下：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#6272a4">// 跳跃表定义
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">typedef</span> <span style="color:#ff79c6">struct</span> zskiplist {
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// 头节点，尾节点
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">struct</span> zskiplistNode <span style="color:#ff79c6">*</span>header, <span style="color:#ff79c6">*</span>tail;
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// 节点数量
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#8be9fd">unsigned</span> <span style="color:#8be9fd">long</span> length;
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// 目前表内节点的最大层数
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#8be9fd">int</span> level;
+</span></span><span style="display:flex;"><span>} zskiplist;
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">// 跳跃表节点
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">typedef</span> <span style="color:#ff79c6">struct</span> zskiplistNode {
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// member 对象
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    robj <span style="color:#ff79c6">*</span>obj;
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// 分值
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#8be9fd">double</span> score;
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// 后退指针
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">struct</span> zskiplistNode <span style="color:#ff79c6">*</span>backward;
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// 层
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">struct</span> zskiplistLevel {
+</span></span><span style="display:flex;"><span>        <span style="color:#6272a4">// 前进指针
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>        <span style="color:#ff79c6">struct</span> zskiplistNode <span style="color:#ff79c6">*</span>forward;
+</span></span><span style="display:flex;"><span>        <span style="color:#6272a4">// 这个层跨越的节点数量
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>        <span style="color:#8be9fd">unsigned</span> <span style="color:#8be9fd">int</span> span;
+</span></span><span style="display:flex;"><span>    } level[];
+</span></span><span style="display:flex;"><span>} zskiplistNode;
+</span></span></code></pre></div><p>
+  <img src="/img/redis/skiplist.svg" alt="">
+
+
+跳跃表较复杂有趣，但是不需要太了解，详情看<a href="https://redisbook.readthedocs.io/en/latest/internal-datastruct/skiplist.html">redis跳跃表细节</a></p>
+<h3 id="16-整数集合">1.6 整数集合</h3>
+<p>Intset 是集合键的底层实现之一，如果一个集合：</p>
+<ul>
+<li>只保存着整数元素；</li>
+<li>元素的数量不多；
+那么 Redis 就会使用 intset 来保存集合元素。\</li>
+</ul>
+<p>结构定义：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#ff79c6">typedef</span> <span style="color:#ff79c6">struct</span> intset {
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// 保存元素所使用的类型的长度，三个类型INTSET_ENC_INT16、INTSET_ENC_INT32、INTSET_ENC_INT64 (sizeof(int64_t))
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#8be9fd">uint32_t</span> encoding;
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// 元素个数
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#8be9fd">uint32_t</span> length;
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// 保存元素的数组
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#8be9fd">int8_t</span> contents[];
+</span></span><span style="display:flex;"><span>} intset;
+</span></span></code></pre></div><p>contents 数组是实际保存元素的地方，数组中的元素有以下两个特性：</p>
+<ul>
+<li>元素不重复；</li>
+<li>元素在数组中由小到大排列；</li>
+</ul>
+<p>在编码较小的集合中插入大数为升级，具体升级策略查看<a href="https://redisbook.readthedocs.io/en/latest/compress-datastruct/intset.html">redis的整数集合详解</a></p>
+<h3 id="17-压缩列表">1.7 压缩列表</h3>
+<blockquote>
+<p>因为 ziplist 节约内存的性质， 哈希键、列表键和有序集合键初始化的底层实现皆采用 ziplist。</p>
+</blockquote>
+<p>下图展示了一个 ziplist 的典型分布结构：</p>
+<pre tabindex="0"><code>area        |&lt;---- ziplist header ----&gt;|&lt;----------- entries -------------&gt;|&lt;-end-&gt;|
+
+size          4 bytes  4 bytes  2 bytes    ?        ?        ?        ?     1 byte
+            +---------+--------+-------+--------+--------+--------+--------+-------+
+component   | zlbytes | zltail | zllen | entry1 | entry2 |  ...   | entryN | zlend |
+            +---------+--------+-------+--------+--------+--------+--------+-------+
+                                       ^                          ^        ^
+address                                |                          |        |
+                                ZIPLIST_ENTRY_HEAD                |   ZIPLIST_ENTRY_END
+                                                                  |
+                                                         ZIPLIST_ENTRY_TAIL
+</code></pre><p>一个 ziplist 可以包含多个节点，每个节点可以划分为以下几个部分：</p>
+<pre tabindex="0"><code>area        |&lt;------------------- entry --------------------&gt;|
+
+            +------------------+----------+--------+---------+
+component   | pre_entry_length | encoding | length | content |
+            +------------------+----------+--------+---------+
+</code></pre><p>具体查看<a href="https://redisbook.readthedocs.io/en/latest/compress-datastruct/ziplist.html">redis压缩列表详解</a></p>
+<h2 id="2redis单机多机设定">2、redis单机、多机设定</h2>
+<h3 id="21-rdb">2.1 RDB</h3>
+<p>RDB是redis的一种持久化机制</p>
+<ul>
+<li>rdbSave 会将数据库数据保存到 RDB 文件，并在保存完成之前阻塞调用者。</li>
+<li>SAVE 命令直接调用 rdbSave ，阻塞 Redis 主进程； BGSAVE 用子进程调用 rdbSave ，主进程仍可继续处理命令请求。</li>
+<li>SAVE 执行期间， AOF 写入可以在后台线程进行， BGREWRITEAOF 可以在子进程进行，所以这三种操作可以同时进行。</li>
+<li>为了避免产生竞争条件， BGSAVE 执行时， SAVE 命令不能执行。</li>
+<li>为了避免性能问题， BGSAVE 和 BGREWRITEAOF 不能同时执行。</li>
+<li>调用 rdbLoad 函数载入 RDB 文件时，不能进行任何和数据库相关的操作，不过订阅与发布方面的命令可以正常执行，因为它们和数据库不相关联。
+RDB 文件的组织方式如下：</li>
+</ul>
+<pre tabindex="0"><code>+-------+-------------+-----------+-----------------+-----+-----------+
+| REDIS | RDB-VERSION | SELECT-DB | KEY-VALUE-PAIRS | EOF | CHECK-SUM |
++-------+-------------+-----------+-----------------+-----+-----------+
+
+                      |&lt;-------- DB-DATA ----------&gt;|
+</code></pre><p>键值对在 RDB 文件中的组织方式如下：</p>
+<pre tabindex="0"><code>+----------------------+---------------+-----+-------+
+| OPTIONAL-EXPIRE-TIME | TYPE-OF-VALUE | KEY | VALUE |
++----------------------+---------------+-----+-------+
+</code></pre><p>RDB 文件使用不同的格式来保存不同类型的值。
+细节看<a href="https://redisbook.readthedocs.io/en/latest/internal/rdb.html">RDB详解</a></p>
+<h3 id="22-aof">2.2 AOF</h3>
+<p>AOF是redis的一种持久化机制</p>
+<ul>
+<li>AOF 文件通过保存所有修改数据库的命令来记录数据库的状态。</li>
+<li>AOF 文件中的所有命令都以 Redis 通讯协议的格式保存。</li>
+<li>不同的 AOF 保存模式对数据的安全性、以及 Redis 的性能有很大的影响。</li>
+<li>AOF 重写的目的是用更小的体积来保存数据库状态，整个重写过程基本上不影响 Redis 主进程处理命令请求。</li>
+<li>AOF 重写是一个有歧义的名字，实际的重写工作是针对数据库的当前值来进行的，程序既不读写、也不使用原有的 AOF 文件。</li>
+<li>AOF 可以由用户手动触发，也可以由服务器自动触发。
+细节看<a href="https://redisbook.readthedocs.io/en/latest/internal/aof.html">AOF详解</a></li>
+</ul>
+<h2 id="3附录">3、附录</h2>
+<p><strong>常用命令</strong></p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>set</td>
+<td>设置一个key/value</td>
+</tr>
+<tr>
+<td>get</td>
+<td>根据key获得对应的value</td>
+</tr>
+<tr>
+<td>mset</td>
+<td>一次设置多个key value</td>
+</tr>
+<tr>
+<td>mget</td>
+<td>一次获得多个key的value</td>
+</tr>
+<tr>
+<td>getset</td>
+<td>获得原始key的值，同时设置新值</td>
+</tr>
+<tr>
+<td>strlen</td>
+<td>获得对应key存储value的长度</td>
+</tr>
+<tr>
+<td>append</td>
+<td>为对应key的value追加内容</td>
+</tr>
+<tr>
+<td>getrange 索引0开始</td>
+<td>截取value的内容</td>
+</tr>
+<tr>
+<td>setex</td>
+<td>设置一个key存活的有效期（秒）</td>
+</tr>
+<tr>
+<td>psetex</td>
+<td>设置一个key存活的有效期（毫秒）</td>
+</tr>
+<tr>
+<td>setnx</td>
+<td>存在不做任何操作,不存在添加</td>
+</tr>
+<tr>
+<td>msetnx原子操作(只要有一个存在不做任何操作)</td>
+<td>可以同时设置多个key,只要有一个存在都不保存</td>
+</tr>
+<tr>
+<td>decr</td>
+<td>进行数值类型的-1操作</td>
+</tr>
+<tr>
+<td>decrby</td>
+<td>根据提供的数据进行减法操作</td>
+</tr>
+<tr>
+<td>Incr</td>
+<td>进行数值类型的+1操作</td>
+</tr>
+<tr>
+<td>incrby</td>
+<td>根据提供的数据进行加法操作</td>
+</tr>
+<tr>
+<td>Incrbyfloat</td>
+<td>根据提供的数据加入浮点数</td>
+</tr>
+</tbody>
+</table>
+
+
+                
+
+                
+                <hr>
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/post/2024-08-29-redis-interview/" data-toggle="tooltip" data-placement="top" title="redis面试问题">&larr;
+                            Previous Post</a>
+                    </li>
+                    
+                    
+                </ul>
+                
+
+                
+
+
+            </div>
+
+            
+            
+            <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                <div class="side-catalog">
+                    <hr class="hidden-sm hidden-xs">
+                    <h5>
+                        <a class="catalog-toggle" href="#">CATALOG</a>
+                    </h5>
+                    <ul class="catalog-body"></ul>
+                </div>
+            </div>
+            
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                
+                
+                <section>
+                    <hr class="hidden-sm hidden-xs">
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/redis" title="redis">
+                            redis
+                        </a>
+                        
+                        
+                    </div>
+                </section>
+                
+
+                
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">                  
+                    
+                    <li>
+                        <a href="mailto:1308340194@qq.com">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+                    
+                    
+                    
+                    
+
+		            
+                    
+                    <li>
+                        <a target="_blank" href="/img/erweima.jpg">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-weixin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		            
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/LBTer">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		            
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            
+           
+             </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; LBT的 Blog 2024
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script>
+    function loadAsync(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        loadAsync("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+<script type="text/javascript">
+    function generateCatalog(selector) {
+
+        
+        
+        
+        
+            _containerSelector = 'div.post-container'
+        
+
+        
+        var P = $(_containerSelector), a, n, t, l, i, c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+
+        
+        $(selector).html('')
+
+        
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#" + $(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
+            l = $('<li class="' + n + '_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;
+    }
+
+    generateCatalog(".catalog-body");
+
+    
+    $(".catalog-toggle").click((function (e) {
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    
+
+
+    loadAsync("\/js\/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
+
+
+
+
+
+
+</body>
+</html>

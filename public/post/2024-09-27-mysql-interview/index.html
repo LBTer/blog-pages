@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="LBT的 Blog">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="https://LBTer.github.io//img/michal-prucha-unsplash.jpg">
+    <meta property="twitter:image" content="https://LBTer.github.io//img/michal-prucha-unsplash.jpg" />
+    
+
+    
+    <meta name="title" content="An Example Post" />
+    <meta property="og:title" content="An Example Post" />
+    <meta property="twitter:title" content="An Example Post" />
+    
+
+    
+    <meta name="description" content="罗浩远，一个探索者  | 这里是 罗浩远 的博客，与你一起发现更大的世界。">
+    <meta property="og:description" content="罗浩远，一个探索者  | 这里是 罗浩远 的博客，与你一起发现更大的世界。" />
+    <meta property="twitter:description" content="罗浩远，一个探索者  | 这里是 罗浩远 的博客，与你一起发现更大的世界。" />
+    
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+
+    <meta name="keyword"  content="罗浩远, luohaoyuan, LBT Blog, 博客, 个人网站, 互联网, Web, 云原生, PaaS, Kubernetes, 微服务, Microservice">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>An Example Post | LBT的博客 | LuoHaoyuan Blog</title>
+
+    <link rel="canonical" href="/post/2024-09-27-mysql-interview/">
+
+    
+    
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/css/hugo-theme-cleanwhite.min.css">
+
+    
+    <link rel="stylesheet" href="/css/zanshang.css">
+
+    
+    <link rel="stylesheet" href="/css/font-awesome.all.min.css">
+
+    
+    
+
+    
+    <script src="/js/jquery.min.js"></script>
+
+    
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+    
+    <script src="/js/lazysizes.min.js"></script>
+
+    
+    
+
+</head>
+
+
+
+
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">LBT的 Blog</a>
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">All Posts</a>
+                    </li>
+                    
+                        
+                        <li>
+                            <a href="/categories/ai/">ai</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/book/">book</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/grow/">grow</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/knows/">knows</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/life/">life</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/plan/">plan</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/tech/">tech</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/todo/">todo</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/watch/">watch</a>
+                        </li>
+                        
+                    
+                    
+		    
+                        <li><a href="/archive//">ARCHIVE</a></li>
+                    
+		            <li>
+                        <a href="/search"><i class="fa fa-search"></i></a>
+		           </li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/img/michal-prucha-unsplash.jpg')
+    }
+</style>
+
+<header class="intro-header" >
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/tag1" title="tag1">
+                            tag1
+                        </a>
+                        
+                        <a class="tag" href="/tags/tag2" title="tag2">
+                            tag2
+                        </a>
+                        
+                    </div>
+                    <h1>An Example Post</h1>
+                    <h2 class="subheading"></h2>
+                    <span class="meta">
+                        
+                            Posted by 
+                            
+                                     &#34;&#34;
+                             
+                            on 
+                            Friday, September 27, 2024
+                            
+                            
+                            
+                            
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+<article>
+    <div class="container">
+        <div class="row">
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                
+                <h1 id="mysql的乐观锁和悲观锁实现">mysql的乐观锁和悲观锁实现</h1>
+<p>悲观锁和乐观锁是两种常见的并发控制机制，用于处理多事务环境下的数据一致性问题。</p>
+<h3 id="悲观锁的实现原理">悲观锁的实现原理：</h3>
+<p>悲观锁是一种保守的锁定策略，它假设在操作过程中很可能会出现数据冲突，因此在事务开始时就对涉及的数据行进行锁定，直到事务结束才释放锁。这样可以防止其他事务对这些数据行进行修改。</p>
+<p>在 MySQL 中，悲观锁可以通过以下方式实现：</p>
+<ul>
+<li>使用 <code>SELECT FOR UPDATE</code> 语句锁定特定的数据行。</li>
+<li>锁定的数据行在事务提交或回滚之前，其他事务无法对其进行修改。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#6272a4">-- 悲观锁示例
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">START</span> <span style="color:#ff79c6">TRANSACTION</span>;
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">SELECT</span> <span style="color:#ff79c6">*</span> <span style="color:#ff79c6">FROM</span> <span style="color:#ff79c6">table_name</span> <span style="color:#ff79c6">WHERE</span> condition <span style="color:#ff79c6">FOR</span> <span style="color:#ff79c6">UPDATE</span>;
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">-- 执行业务逻辑
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">COMMIT</span>;
+</span></span></code></pre></div><p>在上述示例中，<code>SELECT FOR UPDATE</code> 语句会锁定满足 <code>WHERE</code> 条件的数据行，直到事务通过 <code>COMMIT</code> 提交或通过 <code>ROLLBACK</code> 回滚。</p>
+<h3 id="乐观锁的实现原理">乐观锁的实现原理：</h3>
+<p>乐观锁是一种宽松的锁定策略，它假设在操作过程中数据冲突的可能性很小，因此不会立即锁定数据行。乐观锁通常通过记录数据的版本号或时间戳来实现，更新数据时会检查版本号或时间戳是否发生变化。</p>
+<p>在 MySQL 中，乐观锁可以通过以下方式实现：</p>
+<ul>
+<li>使用数据表中的版本号字段来实现。</li>
+<li>在更新数据时，检查版本号是否与读取时的版本号一致，如果一致则进行更新并增加版本号。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#6272a4">-- 乐观锁示例
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">UPDATE</span> <span style="color:#ff79c6">table_name</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">SET</span> <span style="color:#ff79c6">column_name</span> <span style="color:#ff79c6">=</span> new_value, <span style="color:#ff79c6">version</span> <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">version</span> <span style="color:#ff79c6">+</span> <span style="color:#bd93f9">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">WHERE</span> id <span style="color:#ff79c6">=</span> some_id <span style="color:#ff79c6">AND</span> <span style="color:#ff79c6">version</span> <span style="color:#ff79c6">=</span> current_version;
+</span></span></code></pre></div><p>在上述示例中，更新操作会检查 <code>version</code> 字段的值是否与当前版本号 <code>current_version</code> 一致。如果一致，说明没有其他事务修改了数据，然后执行更新操作并增加版本号。如果不一致，说明数据在读取后被其他事务修改了，此时可以根据业务逻辑进行处理，例如重试或取消操作。</p>
+<h3 id="总结">总结：</h3>
+<ul>
+<li><strong>悲观锁</strong>：通过锁定数据行来保证事务的一致性，适用于高冲突环境。</li>
+<li><strong>乐观锁</strong>：通过检查数据版本来保证事务的一致性，适用于低冲突环境。</li>
+</ul>
+<p>选择使用悲观锁还是乐观锁取决于业务场景和性能要求。悲观锁可能会导致锁等待和锁超时，降低并发性能；乐观锁可能会导致更新失败，需要业务逻辑处理更新冲突。</p>
+<h1 id="mysql隔离级别对应的问题解决方法">mysql隔离级别、对应的问题、解决方法</h1>
+<ul>
+<li>读未提交&ndash;脏读，读到未提交的数据（可能回滚的数据）</li>
+<li>读已提交&ndash;不可重复读，在同一事务中，多次读取同一数据集合时，读到因为其他事务并发修改的结果</li>
+<li>可重复度&ndash;幻读，多次读时，因为新增加的行导致的问题&ndash;mvcc、next-key lock</li>
+<li>可串行化&ndash;超时、锁增用的问题</li>
+</ul>
+<h1 id="在mysql的可重复度级别下乐观锁还有效吗">在mysql的可重复度级别下，乐观锁还有效吗</h1>
+<p>在 MySQL 的可重复读（REPEATABLE READ）隔离级别下，乐观锁仍然有效。这是因为在可重复读隔离级别中，普通的 SELECT 操作是基于快照读的，即读取的是事务开始时的快照数据，而 UPDATE 操作是基于当前读，即读取的是最新的数据版本。因此，即使在同一个事务中，UPDATE 操作可以检测到其他事务已经提交的数据变更，包括版本号的变化。</p>
+<p>当你使用乐观锁时，通常会在数据表中增加一个版本号字段。在更新数据时，你会检查版本号是否与读取时的版本号一致，如果一致，则进行更新并增加版本号。如果不一致，说明数据在读取后被其他事务修改了，你的事务会根据业务逻辑进行处理，比如回滚或者重试。</p>
+<p>在 MySQL 中，这可以通过以下方式实现：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff79c6">UPDATE</span> <span style="color:#ff79c6">table_name</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">SET</span> <span style="color:#ff79c6">column_name</span> <span style="color:#ff79c6">=</span> new_value, <span style="color:#ff79c6">version</span> <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">version</span> <span style="color:#ff79c6">+</span> <span style="color:#bd93f9">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">WHERE</span> id <span style="color:#ff79c6">=</span> some_id <span style="color:#ff79c6">AND</span> <span style="color:#ff79c6">version</span> <span style="color:#ff79c6">=</span> current_version;
+</span></span></code></pre></div><p>如果更新操作中的 WHERE 条件中的版本号与当前版本号不一致，那么 UPDATE 操作将不会更新任何行，事务可以据此来判断是否需要重试或取消操作。</p>
+<p>因此，即使在可重复读隔离级别下，乐观锁也能有效地防止更新丢失问题，因为它依赖于版本号的检查，而不是依赖于 MySQL 的锁机制。这样可以在保持数据一致性的同时，减少锁竞争，提高并发性能。</p>
+<h1 id="mysql-慢查询优化">mysql 慢查询优化</h1>
+<h2 id="个人经验">个人经验</h2>
+<p>1、强制使用索引，例如有些语句在测试环境（数据较少的情况下）会优先使用设定的索引，但是数据量很大的生产环境中，使用时间戳索引，导致慢查询
+2、遍历的语句，不要用limit，要记录游标进行查询</p>
+<p>MySQL的慢查询优化是一个涉及多个层面的复杂过程，以下是一些常见的优化方法：</p>
+<ol>
+<li>
+<p><strong>使用索引优化查询</strong>：</p>
+<ul>
+<li>确保查询条件中涉及的列有适当的索引。例如，如果经常根据 <code>department_id</code> 列的值进行查询，那么为 <code>department_id</code> 列创建一个索引会提高查询效率 。</li>
+</ul>
+</li>
+<li>
+<p><strong>优化查询语句</strong>：</p>
+<ul>
+<li>避免使用 <code>SELECT *</code>，尽量指定需要的列，减少数据传输和处理时间 。</li>
+</ul>
+</li>
+<li>
+<p><strong>使用 LIMIT 限制结果数量</strong>：</p>
+<ul>
+<li>当只需要部分数据时，使用 <code>LIMIT</code> 来限制返回的数据量。</li>
+</ul>
+</li>
+<li>
+<p><strong>避免复杂的 JOIN 操作</strong>：</p>
+<ul>
+<li>尽量不超过三个表的 JOIN 操作，因为过多的 JOIN 会增加查询的复杂度和执行时间。</li>
+</ul>
+</li>
+<li>
+<p><strong>在 varchar 字段上建立索引时，指定索引长度</strong>：</p>
+<ul>
+<li>这可以减少索引的大小，提高索引的效率。</li>
+</ul>
+</li>
+<li>
+<p><strong>避免使用函数和操作符</strong>：</p>
+<ul>
+<li>在 <code>WHERE</code> 子句中避免对列使用函数或操作符，这样可以保证 MySQL 更有效地使用索引 。</li>
+</ul>
+</li>
+<li>
+<p><strong>合理使用正规化和反正规化</strong>：</p>
+<ul>
+<li>正规化可以减少数据冗余，而反正规化可以提高查询效率。合理平衡这两者可以获得最佳性能 。</li>
+</ul>
+</li>
+<li>
+<p><strong>避免在 <code>WHERE</code> 子句中使用 <code>!=</code> 或 <code>&lt;&gt;</code> 操作符</strong>：</p>
+<ul>
+<li>这会导致全表扫描，从而降低查询性能。</li>
+</ul>
+</li>
+<li>
+<p><strong>使用 <code>IN</code> 或 <code>UNION</code> 来替换 <code>OR</code> 条件</strong>：</p>
+<ul>
+<li><code>IN</code> 和 <code>UNION</code> 通常比 <code>OR</code> 更高效，尤其是在处理多个条件时。</li>
+</ul>
+</li>
+<li>
+<p><strong>避免在 <code>WHERE</code> 子句中对字段进行 <code>NULL</code> 值判断</strong>：</p>
+<ul>
+<li>这会导致索引失效，从而导致全表扫描。</li>
+</ul>
+</li>
+<li>
+<p><strong>使用 <code>EXPLAIN</code> 分析查询</strong>：</p>
+<ul>
+<li><code>EXPLAIN</code> 可以帮助你了解查询的执行计划，从而找到优化的切入点。</li>
+</ul>
+</li>
+<li>
+<p><strong>开启慢查询日志</strong>：</p>
+<ul>
+<li>通过慢查询日志可以分析哪些查询执行时间长，从而识别出需要优化的查询 。</li>
+</ul>
+</li>
+<li>
+<p><strong>动态调整与索引维护</strong>：</p>
+<ul>
+<li>根据系统负载和查询模式的变化，动态调整索引策略，并定期维护索引。</li>
+</ul>
+</li>
+</ol>
+<p>通过实施这些优化策略，可以显著提升 MySQL 数据库的查询性能和响应速度。</p>
+
+
+                
+
+                
+                <hr>
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/post/2024-09-20-bytedance/" data-toggle="tooltip" data-placement="top" title="字节面经系列">&larr;
+                            Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/post/2024-09-29-kafka-interview/" data-toggle="tooltip" data-placement="top" title="An Example Post">Next
+                            Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+                
+
+                
+
+
+            </div>
+
+            
+            
+            <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                <div class="side-catalog">
+                    <hr class="hidden-sm hidden-xs">
+                    <h5>
+                        <a class="catalog-toggle" href="#">CATALOG</a>
+                    </h5>
+                    <ul class="catalog-body"></ul>
+                </div>
+            </div>
+            
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                
+                
+                <section>
+                    <hr class="hidden-sm hidden-xs">
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                        
+                        
+                        
+                        <a href="/tags/ai" title="ai">
+                            ai
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/project" title="project">
+                            project
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/redis" title="redis">
+                            redis
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/resume" title="resume">
+                            resume
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/tag1" title="tag1">
+                            tag1
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/tag2" title="tag2">
+                            tag2
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                </section>
+                
+
+                
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">                  
+                    
+                    <li>
+                        <a href="mailto:1308340194@qq.com">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+                    
+                    
+                    
+                    
+
+		            
+                    
+                    <li>
+                        <a target="_blank" href="/img/erweima.jpg">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-weixin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		            
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/LBTer">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		            
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            
+           
+             </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; LBT的 Blog 2024
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script>
+    function loadAsync(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        loadAsync("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+<script type="text/javascript">
+    function generateCatalog(selector) {
+
+        
+        
+        
+        
+            _containerSelector = 'div.post-container'
+        
+
+        
+        var P = $(_containerSelector), a, n, t, l, i, c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+
+        
+        $(selector).html('')
+
+        
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#" + $(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
+            l = $('<li class="' + n + '_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;
+    }
+
+    generateCatalog(".catalog-body");
+
+    
+    $(".catalog-toggle").click((function (e) {
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    
+
+
+    loadAsync("\/js\/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
+
+
+
+
+
+
+</body>
+</html>

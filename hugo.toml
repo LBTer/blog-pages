@@ -6,7 +6,7 @@ languageCode = "en-us"
 disqusShortname = ""
 googleAnalytics = ""
 preserveTaxonomyNames = true
-paginate = 5 #frontpage pagination
+paginate = 10 #frontpage pagination
 hasCJKLanguage = true
 
 [outputs]
@@ -15,10 +15,10 @@ home = ["HTML", "RSS", "Algolia"]
 [params]
   header_image = "img/michal-prucha-unsplash.jpg"
   SEOTitle = "LBT的博客 | LuoHaoyuan Blog"
-  description = "罗浩远，程序员,  | 这里是 罗好圆 的博客，与你一起发现更大的世界。"
-  keyword = "罗浩远, luohaoyuan, Zhaohuabing, , 赵化冰的网络日志, 赵化冰的博客, Zhaohuabing Blog, 博客, 个人网站, 互联网, Web, 云原生, PaaS, Istio, Kubernetes, 微服务, Microservice"
-  slogan = "路在脚下，心向远方"
-  upstreamAttribution = true
+  description = "罗浩远，一个探索者  | 这里是 罗浩远 的博客，与你一起发现更大的世界。"
+  keyword = "罗浩远, luohaoyuan, LBT Blog, 博客, 个人网站, 互联网, Web, 云原生, PaaS, Kubernetes, 微服务, Microservice"
+  slogan = "60 is better than 100"
+  upstreamAttribution = false
 
   image_404 = "img/404-bg.jpg"
   title_404 = "你来到了没有知识的荒原 :("
@@ -30,14 +30,13 @@ home = ["HTML", "RSS", "Algolia"]
   leancloud_app_key = ""
 
   # algolia site search
-  algolia_search = true
+  algolia_search = false
   algolia_appId = ""
   algolia_indexName = ""
   algolia_apiKey = ""
 
   # Sidebar settings
-  sidebar_about_description = "Software Developer, Open Source Enthusiast and Life Adventurer"
-  #sidebar_avatar = "img/avatar-zhaohuabing.jpg"      # use absolute URL, seeing it's used in both `/` and `/about/`
+  sidebar_about_description = "Software Developer and Life Adventurer"
   sidebar_avatar = "img/luohaoyuan.jpg"      # use absolute URL, seeing it's used in both `/` and `/about/`
 
   featured_tags = true 
@@ -56,11 +55,11 @@ home = ["HTML", "RSS", "Algolia"]
   twikoo_env_id = ""
 
   #Enable wechat pay & alipay to allow readers send reward money if they like the articles 
-  reward = true 
+  reward = false
   # reward_guide = "如果这篇文章对你有用,请随意打赏" 
 
-  friends = true
-  bookmarks = false
+  friends = false
+  bookmarks = true
   about_me = true
 
   # Include any custom CSS and/or JS files, url or relative to /static folder
@@ -68,7 +67,7 @@ home = ["HTML", "RSS", "Algolia"]
   #custom_js = ["js/lightbox.js", "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js", "js/main.js"]
 
   [params.social]
-  rss            = true 
+  rss            = false
   email          = "1308340194@qq.com"
   #facebook      = "full profile url in facebook"
   #googleplus    = "full profile url in googleplus"
@@ -77,7 +76,7 @@ home = ["HTML", "RSS", "Algolia"]
   #stackoverflow  = "https://stackoverflow.com/users/yourstackoverflowid"
   #instagram     = "full profile url in instagram"
   github         = "https://github.com/LBTer"
-  wechat         = "your wechat qr code image"
+  wechat         = "img/erweima.jpg"
   #medium        = "full profile url in medium"
   #slack         = "full workspace url in slack"
   #pinterest     = "full profile url in pinterest"
@@ -88,16 +87,10 @@ home = ["HTML", "RSS", "Algolia"]
   #xing          = "https://www.xing.com/profile/yourxingid"
   #git           = "full profile url for git user"
   
-  [[params.friend_link]]
-  title = "Linda的博客"
-  href =  "https://zhaozhihan.com"
+  #[[params.friend_link]]
+  #title = "Linda的博客"
+  #href =  "https://zhaozhihan.com"
 
-  [[params.bookmark_link]]
-  title =  "Martin Fowler"
-  href =  "https://martinfowler.com"
-  [[params.bookmark_link]]
-  title = "ServiceMesher"
-  href =  "http://www.servicemesher.com"
   [[params.bookmark_link]]
   title =  "Pxhere"
   href = "https://pxhere.com"
@@ -108,12 +101,12 @@ home = ["HTML", "RSS", "Algolia"]
   [[params.addtional_menus]]
   title =  "ARCHIVE"
   href =  "/archive/"
-  [[params.addtional_menus]]
-  title =  "NOTES"
-  href =  "/notes/"
-  [[params.addtional_menus]]
-  title =  "ABOUT"
-  href =  "/about/"
+  #[[params.addtional_menus]]
+  #title =  "NOTES"
+  #href =  "/notes/"
+  #[[params.addtional_menus]]
+  #title =  "ABOUT"
+  #href =  "/about/"
 
 [outputFormats.Algolia]
 baseName = "algolia"

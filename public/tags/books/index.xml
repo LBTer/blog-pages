@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Books on LBT的 Blog</title>
+    <link>https://LBTer.github.io/tags/books/</link>
+    <description>Recent content in Books on LBT的 Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 02 Sep 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://LBTer.github.io/tags/books/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>《精益创业》阅读体验</title>
+      <link>https://LBTer.github.io/post/2024-09-02-the-lean-startup/</link>
+      <pubDate>Mon, 02 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://LBTer.github.io/post/2024-09-02-the-lean-startup/</guid>
+      <description>概况 互联网化和全球化的主题下，公司发展的提炼： 目标顾客&amp;ndash;小范围试验&amp;ndash;反馈修改&amp;ndash;产品迭代&amp;ndash;获得</description>
+    </item>
+  </channel>
+</rss>

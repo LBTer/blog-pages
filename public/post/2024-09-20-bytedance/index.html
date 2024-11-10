@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="LBT的 Blog">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="https://LBTer.github.io//img/michal-prucha-unsplash.jpg">
+    <meta property="twitter:image" content="https://LBTer.github.io//img/michal-prucha-unsplash.jpg" />
+    
+
+    
+    <meta name="title" content="字节面经系列" />
+    <meta property="og:title" content="字节面经系列" />
+    <meta property="twitter:title" content="字节面经系列" />
+    
+
+    
+    <meta name="description" content="罗浩远，一个探索者  | 这里是 罗浩远 的博客，与你一起发现更大的世界。">
+    <meta property="og:description" content="罗浩远，一个探索者  | 这里是 罗浩远 的博客，与你一起发现更大的世界。" />
+    <meta property="twitter:description" content="罗浩远，一个探索者  | 这里是 罗浩远 的博客，与你一起发现更大的世界。" />
+    
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+
+    <meta name="keyword"  content="罗浩远, luohaoyuan, LBT Blog, 博客, 个人网站, 互联网, Web, 云原生, PaaS, Kubernetes, 微服务, Microservice">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>字节面经系列 | LBT的博客 | LuoHaoyuan Blog</title>
+
+    <link rel="canonical" href="/post/2024-09-20-bytedance/">
+
+    
+    
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/css/hugo-theme-cleanwhite.min.css">
+
+    
+    <link rel="stylesheet" href="/css/zanshang.css">
+
+    
+    <link rel="stylesheet" href="/css/font-awesome.all.min.css">
+
+    
+    
+
+    
+    <script src="/js/jquery.min.js"></script>
+
+    
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+    
+    <script src="/js/lazysizes.min.js"></script>
+
+    
+    
+
+</head>
+
+
+
+
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">LBT的 Blog</a>
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">All Posts</a>
+                    </li>
+                    
+                        
+                        <li>
+                            <a href="/categories/ai/">ai</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/book/">book</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/grow/">grow</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/knows/">knows</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/life/">life</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/plan/">plan</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/tech/">tech</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/todo/">todo</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/watch/">watch</a>
+                        </li>
+                        
+                    
+                    
+		    
+                        <li><a href="/archive//">ARCHIVE</a></li>
+                    
+		            <li>
+                        <a href="/search"><i class="fa fa-search"></i></a>
+		           </li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/img/michal-prucha-unsplash.jpg')
+    }
+</style>
+
+<header class="intro-header" >
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/resume" title="resume">
+                            resume
+                        </a>
+                        
+                    </div>
+                    <h1>字节面经系列</h1>
+                    <h2 class="subheading"></h2>
+                    <span class="meta">
+                        
+                            Posted by 
+                            
+                                     &#34;&#34;
+                             
+                            on 
+                            Friday, September 20, 2024
+                            
+                            
+                            
+                            
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+<article>
+    <div class="container">
+        <div class="row">
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                
+                <h2 id="字节面经">字节面经</h2>
+<ul>
+<li><a href="https://www.kancloud.cn/leonshi/programming/2577007">https://www.kancloud.cn/leonshi/programming/2577007</a></li>
+</ul>
+<h2 id="golang知识点">golang知识点</h2>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> GMP调度模型, <a href="https://learnku.com/articles/41728">详情</a></li>
+<li><input disabled="" type="checkbox"> Context用法</li>
+<li><input checked="" disabled="" type="checkbox"> 垃圾回收，优点和缺点, <a href="https://www.yuque.com/aceld/golang/zhzanb">详情</a></li>
+<li><input checked="" disabled="" type="checkbox"> go语言逃逸分析，何时堆，何时栈？<a href="https://www.yuque.com/aceld/golang/yyrlis">详情</a></li>
+<li><input checked="" disabled="" type="checkbox"> channel</li>
+<li><input checked="" disabled="" type="checkbox"> defer的知识点，<a href="https://www.yuque.com/aceld/golang/qnubsg">详情</a></li>
+<li><input disabled="" type="checkbox"> gomodule, 学会基础用法即可, <a href="https://www.yuque.com/aceld/golang/wo6b5p">详情</a></li>
+<li><input checked="" disabled="" type="checkbox"> go内存, <a href="https://www.yuque.com/aceld/golang/qzyivn">详情</a></li>
+<li><input disabled="" type="checkbox"> golang调试, <a href="https://debug-lixiwen.github.io/2021/07/18/shi-zhan/">详情</a></li>
+<li><input disabled="" type="checkbox"> 火焰图, <a href="https://bbs.huaweicloud.com/blogs/289818">详情</a></li>
+</ul>
+<h3 id="defer">defer</h3>
+<ul>
+<li>先进后出</li>
+<li>在return后执行（最终返回值要执行完defer再返回）</li>
+<li>defer在panic后依然有效果，所以可以用于捕获panic，但是只有最后一个panic可以被捕捉到</li>
+</ul>
+<h3 id="channel">channel</h3>
+<ul>
+<li>给nil的channel发送，永远阻塞</li>
+<li>从nil的channel接收，永远阻塞</li>
+<li>给已经关闭的channel发送，panic</li>
+<li>从已关闭的channel接受，如果是缓冲区为空，收到0值</li>
+<li>无缓冲的channel是同步的，有缓冲的channel是非同步的</li>
+<li>15字口诀：“空读写阻塞，写关闭异常，读关闭空零”</li>
+</ul>
+<h2 id="操作系统网络">操作系统&amp;网络</h2>
+<ul>
+<li><input disabled="" type="checkbox"> select和epoll, <a href="https://www.yuque.com/aceld/golang/sdgfgu">详情</a></li>
+<li><input disabled="" type="checkbox"> http和https，https的加密过程，需要几次通信</li>
+<li><input disabled="" type="checkbox"> tcp拥塞控制</li>
+<li><input disabled="" type="checkbox"> tcp三次握手和四次挥手，time_wait问题</li>
+<li><input disabled="" type="checkbox"> 自旋锁和互斥锁的区别</li>
+<li><input disabled="" type="checkbox"> 用过哪些分布式锁，优缺点</li>
+<li><input disabled="" type="checkbox"> 打开一个URL的过程</li>
+<li><input disabled="" type="checkbox"> 进程的调度</li>
+</ul>
+<h2 id="数据库">数据库</h2>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> mysql数据结构，索引和B+树, <a href="https://cloud.tencent.com/developer/article/2292281">详情</a></li>
+<li><input checked="" disabled="" type="checkbox"> 数据库特性ACID, <a href="https://www.yuque.com/aceld/golang/ycp0nb">详情</a></li>
+<li><input disabled="" type="checkbox"> mysql幻读，如何避免</li>
+<li><input disabled="" type="checkbox"> 大库DDL</li>
+<li><input checked="" disabled="" type="checkbox"> B树和B+树的区别，为什么 mysql 要用 B+ 树，mongodb 要用 B 树。<a href="https://juejin.cn/post/6844904136576598029">详情</a></li>
+<li><input disabled="" type="checkbox"> mysql如何保证数据的一致性，</li>
+</ul>
+<h3 id="btree和b-tree的区别">B+tree和B-tree的区别</h3>
+<p>B+tree只有叶子结点存储数据，树高度更低，局部性更好</p>
+<h2 id="中间件">中间件</h2>
+<ul>
+<li><input disabled="" type="checkbox"> kafka原理, <a href="https://cloud.tencent.com/developer/article/1775065">详情</a>
+使用，统一分发渠道，省略对接成本；异步限流控制，任务会有放大的效果；异步限制爬取入库流量，处理速率固定</li>
+<li><input disabled="" type="checkbox"> redis常用法, <a href="">详情</a></li>
+<li><input disabled="" type="checkbox"> redis setnx + expire 有什么缺点，如何优化。<a href="content/post/2024-08-29-redis-interview.md">详情</a></li>
+<li><input disabled="" type="checkbox"> redis 的跳表知道吗，为什么不用红黑树。<a href="">详情</a></li>
+</ul>
+<h3 id="redis">redis</h3>
+<h2 id="算法">算法</h2>
+<ul>
+<li><input disabled="" type="checkbox"> 反转链表</li>
+<li><input disabled="" type="checkbox"> 三数之和</li>
+<li><input disabled="" type="checkbox"> 链表求和</li>
+<li><input disabled="" type="checkbox"> 最小覆盖子串</li>
+<li><input disabled="" type="checkbox"> 最大交换</li>
+<li><input disabled="" type="checkbox"> 把一个方程式设计成树</li>
+<li><input checked="" disabled="" type="checkbox"> 字符串处理（深信服）</li>
+<li><input checked="" disabled="" type="checkbox"> 两个列表取取一样的值（富途）</li>
+</ul>
+<h2 id="架构">架构</h2>
+<p>设计一个海量的评论系统
+设计一个微信朋友圈系统，列出主要的表结构，只需要实现一些基础的功能
+类似于设计一个长链接转短链接，不过需要考虑高并发，回答了分库分表。
+设计一个海量日志写入系统</p>
+<h2 id="阿里的问题">阿里的问题</h2>
+<ul>
+<li><input disabled="" type="checkbox"> 2个文件，1亿行字符串，如何找到相同的字符串，<a href="https://juejin.cn/post/6844904003998842887">海量数据相关</a>
+分治，先用hash划分范围两个文件中的数据到同一个范围，然后map或者字典树解决</li>
+<li><input disabled="" type="checkbox"> 介绍你主导的一个业务
+CDN成本结算
+增量更新</li>
+<li><input disabled="" type="checkbox"> 如何用mysql实现乐观锁和悲观锁
+悲观：select for update
+乐观：判断版本是否对，然后更新/失败</li>
+<li><input disabled="" type="checkbox"> mysql的隔离级别和问题
+读未提交&ndash;脏读，读到未提交的数据（可能回滚的数据）
+读已提交&ndash;不可重复读，在同一事务中，多次读取同一数据集合时，读到因为其他事务并发修改的结果
+可重复度&ndash;幻读，多次读时，因为新增加的行导致的问题&ndash;mvcc、next-key lock
+可串行化&ndash;超时、锁增用的问题</li>
+<li><input disabled="" type="checkbox"> redis实现分布式锁，<a href="https://www.cnblogs.com/xiaolincoding/p/16517673.html">详情</a>
+设置过期时间，SET key value NX PX time_millisecond
+解锁，DEL
+线程独立标识，只能自己解锁自己
+自动续期时间</li>
+</ul>
+
+
+                
+
+                
+                <hr>
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/post/2024-09-19-laoqiangshuo/" data-toggle="tooltip" data-placement="top" title="老强说 视频观看">&larr;
+                            Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/post/2024-09-27-mysql-interview/" data-toggle="tooltip" data-placement="top" title="An Example Post">Next
+                            Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+                
+
+                
+
+
+            </div>
+
+            
+            
+            <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                <div class="side-catalog">
+                    <hr class="hidden-sm hidden-xs">
+                    <h5>
+                        <a class="catalog-toggle" href="#">CATALOG</a>
+                    </h5>
+                    <ul class="catalog-body"></ul>
+                </div>
+            </div>
+            
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                
+                
+                <section>
+                    <hr class="hidden-sm hidden-xs">
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                        
+                        
+                        
+                        <a href="/tags/ai" title="ai">
+                            ai
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/project" title="project">
+                            project
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/redis" title="redis">
+                            redis
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/resume" title="resume">
+                            resume
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/tag1" title="tag1">
+                            tag1
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/tag2" title="tag2">
+                            tag2
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                </section>
+                
+
+                
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">                  
+                    
+                    <li>
+                        <a href="mailto:1308340194@qq.com">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+                    
+                    
+                    
+                    
+
+		            
+                    
+                    <li>
+                        <a target="_blank" href="/img/erweima.jpg">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-weixin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		            
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/LBTer">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		            
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            
+           
+             </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; LBT的 Blog 2024
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script>
+    function loadAsync(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        loadAsync("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+<script type="text/javascript">
+    function generateCatalog(selector) {
+
+        
+        
+        
+        
+            _containerSelector = 'div.post-container'
+        
+
+        
+        var P = $(_containerSelector), a, n, t, l, i, c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+
+        
+        $(selector).html('')
+
+        
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#" + $(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
+            l = $('<li class="' + n + '_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;
+    }
+
+    generateCatalog(".catalog-body");
+
+    
+    $(".catalog-toggle").click((function (e) {
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    
+
+
+    loadAsync("\/js\/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
+
+
+
+
+
+
+</body>
+</html>

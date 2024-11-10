@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Build on LBT的 Blog</title>
+    <link>http://localhost:1313/tags/build/</link>
+    <description>Recent content in Build on LBT的 Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 01 Sep 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/build/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>build your own redis</title>
+      <link>http://localhost:1313/post/2024-09-01-redis/</link>
+      <pubDate>Sun, 01 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2024-09-01-redis/</guid>
+      <description>练习网站</description>
+    </item>
+  </channel>
+</rss>

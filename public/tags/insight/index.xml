@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Insight on LBT的 Blog</title>
+    <link>https://LBTer.github.io/tags/insight/</link>
+    <description>Recent content in Insight on LBT的 Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 30 Aug 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://LBTer.github.io/tags/insight/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>项目细节</title>
+      <link>https://LBTer.github.io/post/2024-08-30-project-insight/</link>
+      <pubDate>Fri, 30 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://LBTer.github.io/post/2024-08-30-project-insight/</guid>
+      <description>1、数据源 2、更新项目 3、爬取项目 3.1 要点分析 爬取量如何确定？ ip代理商的选用评定 4、</description>
+    </item>
+  </channel>
+</rss>

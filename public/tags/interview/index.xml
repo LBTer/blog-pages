@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Interview on LBT的 Blog</title>
+    <link>https://LBTer.github.io/tags/interview/</link>
+    <description>Recent content in Interview on LBT的 Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 29 Aug 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://LBTer.github.io/tags/interview/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>redis面试问题</title>
+      <link>https://LBTer.github.io/post/2024-08-29-redis-interview/</link>
+      <pubDate>Thu, 29 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://LBTer.github.io/post/2024-08-29-redis-interview/</guid>
+      <description>1、redis面试资料整理 redis20道面试题 推荐小林redis常见面试题，还列出了7.0的变化 redis常见面试题总结 redis56题 r</description>
+    </item>
+  </channel>
+</rss>

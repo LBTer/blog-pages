@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Concept on LBT的 Blog</title>
+    <link>https://LBTer.github.io/tags/concept/</link>
+    <description>Recent content in Concept on LBT的 Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 29 Aug 2024 02:00:00 +0000</lastBuildDate>
+    <atom:link href="https://LBTer.github.io/tags/concept/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>redis概念学习</title>
+      <link>https://LBTer.github.io/post/2024-08-29-redis-concept/</link>
+      <pubDate>Thu, 29 Aug 2024 02:00:00 +0000</pubDate>
+      <guid>https://LBTer.github.io/post/2024-08-29-redis-concept/</guid>
+      <description>1、数据结构 redis的诞生也有较久的时间，国内已有经典入门书籍《redis设计与实现》，本篇章中的图片来自相应网站 学习redis的设计理念</description>
+    </item>
+  </channel>
+</rss>

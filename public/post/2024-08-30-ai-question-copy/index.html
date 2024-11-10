@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="LBT的 Blog">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="http://localhost:1313//img/michal-prucha-unsplash.jpg">
+    <meta property="twitter:image" content="http://localhost:1313//img/michal-prucha-unsplash.jpg" />
+    
+
+    
+    <meta name="title" content="20240830问题" />
+    <meta property="og:title" content="20240830问题" />
+    <meta property="twitter:title" content="20240830问题" />
+    
+
+    
+    <meta name="description" content="罗浩远，一个探索者  | 这里是 罗浩远 的博客，与你一起发现更大的世界。">
+    <meta property="og:description" content="罗浩远，一个探索者  | 这里是 罗浩远 的博客，与你一起发现更大的世界。" />
+    <meta property="twitter:description" content="罗浩远，一个探索者  | 这里是 罗浩远 的博客，与你一起发现更大的世界。" />
+    
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+
+    <meta name="keyword"  content="罗浩远, luohaoyuan, LBT Blog, 博客, 个人网站, 互联网, Web, 云原生, PaaS, Kubernetes, 微服务, Microservice">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>20240830问题 | LBT的博客 | LuoHaoyuan Blog</title>
+
+    <link rel="canonical" href="/post/2024-08-30-ai-question-copy/">
+
+    
+    
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/css/hugo-theme-cleanwhite.min.css">
+
+    
+    <link rel="stylesheet" href="/css/zanshang.css">
+
+    
+    <link rel="stylesheet" href="/css/font-awesome.all.min.css">
+
+    
+    
+
+    
+    <script src="/js/jquery.min.js"></script>
+
+    
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+    
+    <script src="/js/lazysizes.min.js"></script>
+
+    
+    
+
+</head>
+
+
+
+
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">LBT的 Blog</a>
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">All Posts</a>
+                    </li>
+                    
+                        
+                        <li>
+                            <a href="/categories/plan/">plan</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/tech/">tech</a>
+                        </li>
+                        
+                    
+                    
+		    
+                        <li><a href="/archive//">ARCHIVE</a></li>
+                    
+		            <li>
+                        <a href="/search"><i class="fa fa-search"></i></a>
+		           </li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/img/michal-prucha-unsplash.jpg')
+    }
+</style>
+
+<header class="intro-header" >
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/ai" title="ai">
+                            ai
+                        </a>
+                        
+                    </div>
+                    <h1>20240830问题</h1>
+                    <h2 class="subheading"></h2>
+                    <span class="meta">
+                        
+                            Posted by 
+                            
+                                LBT
+                             
+                            on 
+                            Friday, August 30, 2024
+                            
+                            
+                            
+                            
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+<article>
+    <div class="container">
+        <div class="row">
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                
+                <h2 id="qa1-爬取项目使用外部ip池时爬取流量的流经路线">qa1: 爬取项目使用外部ip池时，爬取流量的流经路线:</h2>
+<p>ans:
+在使用外部 IP 池进行爬取项目时，爬取流量的流经路线通常如下：</p>
+<ol>
+<li>
+<p><strong>发起请求</strong>：</p>
+<ul>
+<li>爬虫程序在你的服务器或本地计算机上发起请求。</li>
+</ul>
+</li>
+<li>
+<p><strong>通过代理服务器</strong>：</p>
+<ul>
+<li>请求首先发送到代理服务器。这个代理服务器可能是你购买的 IP 池服务提供的一个或多个 IP 地址。</li>
+</ul>
+</li>
+<li>
+<p><strong>IP 池服务</strong>：</p>
+<ul>
+<li>请求通过 IP 池服务分配的 IP 地址转发。IP 池服务可能会根据算法（如轮询、随机选择、地理位置匹配等）选择一个合适的 IP 地址来处理请求。</li>
+</ul>
+</li>
+<li>
+<p><strong>目标网站</strong>：</p>
+<ul>
+<li>代理服务器使用选定的 IP 地址向目标网站发送请求。目标网站看到的请求来源是代理的 IP 地址，而不是爬虫原始的 IP 地址。</li>
+</ul>
+</li>
+<li>
+<p><strong>返回响应</strong>：</p>
+<ul>
+<li>目标网站处理请求并返回响应。响应首先发送回代理服务器。</li>
+</ul>
+</li>
+<li>
+<p><strong>代理转发</strong>：</p>
+<ul>
+<li>代理服务器将从目标网站收到的响应转发回爬虫程序。</li>
+</ul>
+</li>
+<li>
+<p><strong>爬虫接收数据</strong>：</p>
+<ul>
+<li>爬虫程序接收来自代理服务器的数据，并进行相应的处理，如数据解析、存储等。</li>
+</ul>
+</li>
+<li>
+<p><strong>更换 IP 地址</strong>：</p>
+<ul>
+<li>在下一次请求之前，爬虫可能会请求 IP 池服务更换 IP 地址，以避免被封禁。</li>
+</ul>
+</li>
+<li>
+<p><strong>循环过程</strong>：</p>
+<ul>
+<li>整个流程在每次请求时可能会重复，且每次请求可能使用不同的 IP 地址。</li>
+</ul>
+</li>
+</ol>
+<p>以下是这个过程的简化表示：</p>
+<pre tabindex="0"><code>爬虫程序 → 代理服务器 (IP 池服务) → 目标网站 → 代理服务器 → 爬虫程序
+</code></pre><p>使用外部 IP 池服务的好处包括：</p>
+<ul>
+<li><strong>匿名性</strong>：隐藏爬虫的真实 IP 地址，保护服务器不被追踪。</li>
+<li><strong>抗封禁</strong>：通过不断更换 IP 地址，减少被目标网站封禁的风险。</li>
+<li><strong>地理位置多样性</strong>：IP 池通常提供来自不同地理位置的 IP 地址，有助于绕过地理位置限制。</li>
+</ul>
+<p>然而，使用外部 IP 池服务也可能引入额外的延迟，因为请求需要通过第三方服务器中转。此外，使用 IP 池服务时，应确保服务提供商的可靠性和安全性，以保护你的数据和隐私。</p>
+<h2 id="qa2-casbin使用规则">qa2: casbin使用规则</h2>
+<p>ans:
+Casbin 是一个强大的、可扩展的权限管理库，它支持多种访问控制模型，如 ACL（Access Control List）、RBAC（Role-Based Access Control）、ABAC（Attribute-Based Access Control）等。Casbin 的核心功能是通过一个配置文件和策略文件来定义和管理权限规则。</p>
+<h3 id="casbin-的基本组件">Casbin 的基本组件</h3>
+<ol>
+<li>
+<p><strong>模型（Model）</strong>：</p>
+<ul>
+<li>定义了权限管理模型的结构，包括角色、资源、动作和条件等。</li>
+<li>模型文件通常以 <code>.conf</code> 为扩展名。</li>
+</ul>
+</li>
+<li>
+<p><strong>策略（Policy）</strong>：</p>
+<ul>
+<li>定义了具体的权限分配，即哪些角色可以对哪些资源执行哪些动作。</li>
+<li>策略文件通常以 <code>.csv</code> 或 <code>.txt</code> 为扩展名。</li>
+</ul>
+</li>
+<li>
+<p><strong>管理 API</strong>：</p>
+<ul>
+<li>提供了一组 API 来加载、保存和修改策略。</li>
+</ul>
+</li>
+</ol>
+<h3 id="casbin-的使用规则">Casbin 的使用规则</h3>
+<ol>
+<li>
+<p><strong>定义模型</strong>：</p>
+<ul>
+<li>在 <code>model.conf</code> 文件中定义你的权限模型。例如，对于一个简单的 RBAC 系统，模型可能如下：</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ini" data-lang="ini"><span style="display:flex;"><span><span style="color:#ff79c6">[request_definition]</span>
+</span></span><span style="display:flex;"><span><span style="color:#50fa7b">r</span> <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">sub, obj, act</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">[policy_definition]</span>
+</span></span><span style="display:flex;"><span><span style="color:#50fa7b">p</span> <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">sub, obj, act</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">[role_definition]</span>
+</span></span><span style="display:flex;"><span><span style="color:#50fa7b">g</span> <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">_, _</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">[policy_effect]</span>
+</span></span><span style="display:flex;"><span><span style="color:#50fa7b">e</span> <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">some(where (p.eft == allow))</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">[matchers]</span>
+</span></span><span style="display:flex;"><span><span style="color:#50fa7b">m</span> <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">g(r.sub, p.sub) &amp;&amp; r.obj == p.obj &amp;&amp; r.act == p.act</span>
+</span></span></code></pre></div><ul>
+<li>这里定义了请求、策略、角色和匹配器的基本结构。</li>
+</ul>
+</li>
+<li>
+<p><strong>定义策略</strong>：</p>
+<ul>
+<li>在 <code>policy.csv</code> 文件中定义具体的权限策略。例如：</li>
+</ul>
+<pre tabindex="0"><code class="language-csv" data-lang="csv">p, admin, data1, read
+p, admin, data1, write
+p, alice, data2, read
+</code></pre><ul>
+<li>这里定义了 <code>admin</code> 角色可以读取和写入 <code>data1</code> 资源，而 <code>alice</code> 角色可以读取 <code>data2</code> 资源。</li>
+</ul>
+</li>
+<li>
+<p><strong>加载模型和策略</strong>：</p>
+<ul>
+<li>在代码中加载模型和策略文件，初始化 Casbin 引擎。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#ff79c6">import</span> <span style="color:#f1fa8c">&#34;github.com/casbin/casbin/v2&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>enforcer, err <span style="color:#ff79c6">:=</span> casbin.<span style="color:#50fa7b">NewEnforcer</span>(<span style="color:#f1fa8c">&#34;path/to/model.conf&#34;</span>, <span style="color:#f1fa8c">&#34;path/to/policy.csv&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">if</span> err <span style="color:#ff79c6">!=</span> <span style="color:#ff79c6">nil</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#8be9fd;font-style:italic">panic</span>(err)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+<li>
+<p><strong>执行权限检查</strong>：</p>
+<ul>
+<li>使用 Casbin 引擎检查用户是否有权限执行特定操作。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#ff79c6">import</span> <span style="color:#f1fa8c">&#34;github.com/casbin/casbin/v2&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">// 检查用户是否有权限
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>sub <span style="color:#ff79c6">:=</span> <span style="color:#f1fa8c">&#34;alice&#34;</span>
+</span></span><span style="display:flex;"><span>obj <span style="color:#ff79c6">:=</span> <span style="color:#f1fa8c">&#34;data1&#34;</span>
+</span></span><span style="display:flex;"><span>act <span style="color:#ff79c6">:=</span> <span style="color:#f1fa8c">&#34;read&#34;</span>
+</span></span><span style="display:flex;"><span>ok, err <span style="color:#ff79c6">:=</span> enforcer.<span style="color:#50fa7b">Enforce</span>(sub, obj, act)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">if</span> err <span style="color:#ff79c6">!=</span> <span style="color:#ff79c6">nil</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#8be9fd;font-style:italic">panic</span>(err)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">if</span> ok {
+</span></span><span style="display:flex;"><span>  fmt.<span style="color:#50fa7b">Println</span>(<span style="color:#f1fa8c">&#34;Access granted&#34;</span>)
+</span></span><span style="display:flex;"><span>} <span style="color:#ff79c6">else</span> {
+</span></span><span style="display:flex;"><span>  fmt.<span style="color:#50fa7b">Println</span>(<span style="color:#f1fa8c">&#34;Access denied&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+<li>
+<p><strong>动态管理策略</strong>：</p>
+<ul>
+<li>使用 Casbin 的管理 API 动态添加、删除或修改策略。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#6272a4">// 添加一条策略
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>err <span style="color:#ff79c6">:=</span> enforcer.<span style="color:#50fa7b">AddPolicy</span>(<span style="color:#f1fa8c">&#34;alice&#34;</span>, <span style="color:#f1fa8c">&#34;data1&#34;</span>, <span style="color:#f1fa8c">&#34;read&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">if</span> err <span style="color:#ff79c6">!=</span> <span style="color:#ff79c6">nil</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#8be9fd;font-style:italic">panic</span>(err)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">// 删除一条策略
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>err = enforcer.<span style="color:#50fa7b">RemovePolicy</span>(<span style="color:#f1fa8c">&#34;alice&#34;</span>, <span style="color:#f1fa8c">&#34;data1&#34;</span>, <span style="color:#f1fa8c">&#34;read&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">if</span> err <span style="color:#ff79c6">!=</span> <span style="color:#ff79c6">nil</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#8be9fd;font-style:italic">panic</span>(err)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+</ol>
+<p>Casbin 的强大之处在于其灵活性和可扩展性，你可以根据实际需求定义复杂的权限模型和策略。此外，Casbin 还支持插件和中间件，可以与其他系统和框架无缝集成。</p>
+<h2 id="qa3">qa3:</h2>
+
+
+                
+
+                
+                <hr>
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/post/2024-08-30-ai-question/" data-toggle="tooltip" data-placement="top" title="20240830问题">&larr;
+                            Previous Post</a>
+                    </li>
+                    
+                    
+                </ul>
+                
+
+                
+
+
+            </div>
+
+            
+            
+            <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                <div class="side-catalog">
+                    <hr class="hidden-sm hidden-xs">
+                    <h5>
+                        <a class="catalog-toggle" href="#">CATALOG</a>
+                    </h5>
+                    <ul class="catalog-body"></ul>
+                </div>
+            </div>
+            
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                
+                
+                <section>
+                    <hr class="hidden-sm hidden-xs">
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                        
+                        
+                        
+                        <a href="/tags/ai" title="ai">
+                            ai
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/redis" title="redis">
+                            redis
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                </section>
+                
+
+                
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">                  
+                    
+                    <li>
+                        <a href="mailto:1308340194@qq.com">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+                    
+                    
+                    
+                    
+
+		            
+                    
+                    <li>
+                        <a target="_blank" href="/img/erweima.jpg">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-weixin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		            
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/LBTer">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		            
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            
+           
+             </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; LBT的 Blog 2024
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script>
+    function loadAsync(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        loadAsync("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+<script type="text/javascript">
+    function generateCatalog(selector) {
+
+        
+        
+        
+        
+            _containerSelector = 'div.post-container'
+        
+
+        
+        var P = $(_containerSelector), a, n, t, l, i, c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+
+        
+        $(selector).html('')
+
+        
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#" + $(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
+            l = $('<li class="' + n + '_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;
+    }
+
+    generateCatalog(".catalog-body");
+
+    
+    $(".catalog-toggle").click((function (e) {
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    
+
+
+    loadAsync("\/js\/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
+
+
+
+
+
+
+</body>
+</html>

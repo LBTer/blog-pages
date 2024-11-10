@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sytem Design on LBT的 Blog</title>
+    <link>https://LBTer.github.io/tags/sytem-design/</link>
+    <description>Recent content in Sytem Design on LBT的 Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 01 Sep 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://LBTer.github.io/tags/sytem-design/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>《System Design Interview》解读</title>
+      <link>https://LBTer.github.io/post/2024-09-01-system-design/</link>
+      <pubDate>Sun, 01 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://LBTer.github.io/post/2024-09-01-system-design/</guid>
+      <description>1、全书架构 全书分为两部分，第一部分是前三章，分别为：一个服务是怎么发展的、一些基本的数据估计、系统设计面试步骤。 github上有全书的中文</description>
+    </item>
+  </channel>
+</rss>

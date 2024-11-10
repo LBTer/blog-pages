@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tag1 on LBT的 Blog</title>
+    <link>https://LBTer.github.io/tags/tag1/</link>
+    <description>Recent content in Tag1 on LBT的 Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 29 Sep 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://LBTer.github.io/tags/tag1/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>An Example Post</title>
+      <link>https://LBTer.github.io/post/2024-09-29-kafka-interview/</link>
+      <pubDate>Sun, 29 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://LBTer.github.io/post/2024-09-29-kafka-interview/</guid>
+      <description>kafka如何保证一定能发送消息和接受消息 Kafka 确保消息传递的可靠性主要依赖于以下几个机制： 副本机制：Kafka 的每个分区都有多个副本，其中一个</description>
+    </item>
+    <item>
+      <title>An Example Post</title>
+      <link>https://LBTer.github.io/post/2024-09-27-mysql-interview/</link>
+      <pubDate>Fri, 27 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://LBTer.github.io/post/2024-09-27-mysql-interview/</guid>
+      <description>mysql的乐观锁和悲观锁实现 悲观锁和乐观锁是两种常见的并发控制机制，用于处理多事务环境下的数据一致性问题。 悲观锁的实现原理： 悲观锁是一种保</description>
+    </item>
+    <item>
+      <title>面试记录</title>
+      <link>https://LBTer.github.io/post/2024-09-19-job-feel/</link>
+      <pubDate>Thu, 19 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://LBTer.github.io/post/2024-09-19-job-feel/</guid>
+      <description>面试整理</description>
+    </item>
+    <item>
+      <title>技术补盲</title>
+      <link>https://LBTer.github.io/post/2024-08-30-tech/</link>
+      <pubDate>Fri, 30 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://LBTer.github.io/post/2024-08-30-tech/</guid>
+      <description>1、概念 开源协议 开源协议分类和了解 已知MIT、APACHE、BSD可用于开源 CDN 一文了解CDN 用户-边缘节点-源站 CDN实现需要DNS的支持，</description>
+    </item>
+  </channel>
+</rss>

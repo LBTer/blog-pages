@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AI on LBT的 Blog</title>
+    <link>https://LBTer.github.io/categories/ai/</link>
+    <description>Recent content in AI on LBT的 Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 04 Sep 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://LBTer.github.io/categories/ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>20240904问题</title>
+      <link>https://LBTer.github.io/post/2024-09-04-ai-question/</link>
+      <pubDate>Wed, 04 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://LBTer.github.io/post/2024-09-04-ai-question/</guid>
+      <description>qa1: 在 Go 语言中，除了 CLONE_NEWUTS 还有哪些其他系统调用标志？ ans: \ 在 Go 语言中，syscall 包提供了对多种系统调用的访问，包括多种用于不同目的的标志。这些标</description>
+    </item>
+    <item>
+      <title>20240830问题</title>
+      <link>https://LBTer.github.io/post/2024-08-30-ai-question/</link>
+      <pubDate>Fri, 30 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://LBTer.github.io/post/2024-08-30-ai-question/</guid>
+      <description>qa1: 爬取项目使用外部ip池时，爬取流量的流经路线: ans: 在使用外部 IP 池进行爬取项目时，爬取流量的流经路线通常如下： 发起请求： 爬虫程序在你的服务器或</description>
+    </item>
+  </channel>
+</rss>

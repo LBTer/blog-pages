@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Operate on LBT的 Blog</title>
+    <link>https://LBTer.github.io/tags/operate/</link>
+    <description>Recent content in Operate on LBT的 Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 30 Aug 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://LBTer.github.io/tags/operate/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>redis实操</title>
+      <link>https://LBTer.github.io/post/2024-08-30-redis-operate/</link>
+      <pubDate>Fri, 30 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://LBTer.github.io/post/2024-08-30-redis-operate/</guid>
+      <description>1、安装并运行redis 查看官网的安装方法，centos上安装只需通过yum和systemctl管理 sudo yum install redis sudo systemctl enable redis sudo systemctl start redis 查看使用redi</description>
+    </item>
+  </channel>
+</rss>

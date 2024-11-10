@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Redis on LBT的 Blog</title>
+    <link>https://LBTer.github.io/tags/redis/</link>
+    <description>Recent content in Redis on LBT的 Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 04 Sep 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://LBTer.github.io/tags/redis/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>build your x</title>
+      <link>https://LBTer.github.io/post/2024-09-04-build-own-x/</link>
+      <pubDate>Wed, 04 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://LBTer.github.io/post/2024-09-04-build-own-x/</guid>
+      <description>redis 练习网站 &amp;amp; github源码 实现基础的redis服务器，对redis传输数据的编码进行处理，并简单实现AOF落盘功能，但对redis的数据结</description>
+    </item>
+    <item>
+      <title>redis实操</title>
+      <link>https://LBTer.github.io/post/2024-08-30-redis-operate/</link>
+      <pubDate>Fri, 30 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://LBTer.github.io/post/2024-08-30-redis-operate/</guid>
+      <description>1、安装并运行redis 查看官网的安装方法，centos上安装只需通过yum和systemctl管理 sudo yum install redis sudo systemctl enable redis sudo systemctl start redis 查看使用redi</description>
+    </item>
+    <item>
+      <title>redis概念学习</title>
+      <link>https://LBTer.github.io/post/2024-08-29-redis-concept/</link>
+      <pubDate>Thu, 29 Aug 2024 02:00:00 +0000</pubDate>
+      <guid>https://LBTer.github.io/post/2024-08-29-redis-concept/</guid>
+      <description>1、数据结构 redis的诞生也有较久的时间，国内已有经典入门书籍《redis设计与实现》，本篇章中的图片来自相应网站 学习redis的设计理念</description>
+    </item>
+    <item>
+      <title>redis面试问题</title>
+      <link>https://LBTer.github.io/post/2024-08-29-redis-interview/</link>
+      <pubDate>Thu, 29 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://LBTer.github.io/post/2024-08-29-redis-interview/</guid>
+      <description>1、redis面试资料整理 redis20道面试题 推荐小林redis常见面试题，还列出了7.0的变化 redis常见面试题总结 redis56题 r</description>
+    </item>
+  </channel>
+</rss>

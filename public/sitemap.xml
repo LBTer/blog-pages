@@ -2,140 +2,191 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/post/readme/</loc>
-    <lastmod>2019-01-09T00:00:00+00:00</lastmod>
+    <loc>https://LBTer.github.io/categories/</loc>
+    <lastmod>2024-10-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2019-01-09T00:00:00+00:00</lastmod>
+    <loc>https://LBTer.github.io/</loc>
+    <lastmod>2024-10-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/</loc>
-    <lastmod>2019-01-09T00:00:00+00:00</lastmod>
+    <loc>https://LBTer.github.io/post/</loc>
+    <lastmod>2024-10-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2018-06-04T00:00:00+00:00</lastmod>
+    <loc>https://LBTer.github.io/categories/tech/</loc>
+    <lastmod>2024-10-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/istio/</loc>
-    <lastmod>2018-06-04T00:00:00+00:00</lastmod>
+    <loc>https://LBTer.github.io/post/2024-10-04-startup/</loc>
+    <lastmod>2024-10-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/2018/06/04/introducing-the-istio-v1alpha3-routing-api/</loc>
-    <lastmod>2018-06-04T00:00:00+00:00</lastmod>
+    <loc>https://LBTer.github.io/post/2024-09-29-kafka-interview/</loc>
+    <lastmod>2024-09-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2018-06-04T00:00:00+00:00</lastmod>
+    <loc>https://LBTer.github.io/tags/tag1/</loc>
+    <lastmod>2024-09-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/tech/</loc>
-    <lastmod>2018-06-04T00:00:00+00:00</lastmod>
+    <loc>https://LBTer.github.io/tags/tag2/</loc>
+    <lastmod>2024-09-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/2018/06/02/istio08/</loc>
-    <lastmod>2018-06-02T00:00:00+00:00</lastmod>
+    <loc>https://LBTer.github.io/tags/</loc>
+    <lastmod>2024-09-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/2018/05/24/set_up_my_ubuntu_desktop/</loc>
-    <lastmod>2018-05-24T00:00:00+00:00</lastmod>
+    <loc>https://LBTer.github.io/post/2024-09-27-mysql-interview/</loc>
+    <lastmod>2024-09-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/tips/</loc>
-    <lastmod>2018-05-24T00:00:00+00:00</lastmod>
+    <loc>https://LBTer.github.io/tags/resume/</loc>
+    <lastmod>2024-09-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/ubuntu/</loc>
-    <lastmod>2018-05-24T00:00:00+00:00</lastmod>
+    <loc>https://LBTer.github.io/post/2024-09-20-bytedance/</loc>
+    <lastmod>2024-09-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/microservice/</loc>
-    <lastmod>2018-05-23T18:00:00+00:00</lastmod>
+    <loc>https://LBTer.github.io/categories/grow/</loc>
+    <lastmod>2024-09-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/security/</loc>
-    <lastmod>2018-05-23T18:00:00+00:00</lastmod>
+    <loc>https://LBTer.github.io/post/2024-09-19-laoqiangshuo/</loc>
+    <lastmod>2024-09-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/2018/05/23/external_system_auth/</loc>
-    <lastmod>2018-05-23T18:00:00+00:00</lastmod>
+    <loc>https://LBTer.github.io/post/2024-09-19-job-feel/</loc>
+    <lastmod>2024-09-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/2018/05/23/service_2_service_auth/</loc>
-    <lastmod>2018-05-23T15:00:00+00:00</lastmod>
+    <loc>https://LBTer.github.io/tags/up/</loc>
+    <lastmod>2024-09-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/2018/05/22/user_authentication_authorization/</loc>
-    <lastmod>2018-05-23T10:00:00+00:00</lastmod>
+    <loc>https://LBTer.github.io/post/2024-09-18-shangweibuzu/</loc>
+    <lastmod>2024-09-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/2018/05/23/istio-auto-injection-with-webhook/</loc>
-    <lastmod>2018-05-23T00:00:00+00:00</lastmod>
+    <loc>https://LBTer.github.io/categories/book/</loc>
+    <lastmod>2024-09-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/kubernetes/</loc>
-    <lastmod>2018-05-23T00:00:00+00:00</lastmod>
+    <loc>https://LBTer.github.io/post/2024-09-12-resume-inside-out/</loc>
+    <lastmod>2024-09-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/life/</loc>
-    <lastmod>2018-05-01T00:00:00+00:00</lastmod>
+    <loc>https://LBTer.github.io/categories/life/</loc>
+    <lastmod>2024-09-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/travel/</loc>
-    <lastmod>2018-05-01T00:00:00+00:00</lastmod>
+    <loc>https://LBTer.github.io/tags/project/</loc>
+    <lastmod>2024-09-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/2018/05/01/may-day-jiulonghu/</loc>
-    <lastmod>2018-05-01T00:00:00+00:00</lastmod>
+    <loc>https://LBTer.github.io/tags/%E5%BF%83%E7%90%86%E5%BB%BA%E8%AE%BE/</loc>
+    <lastmod>2024-09-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/helm/</loc>
-    <lastmod>2018-04-16T15:00:00+00:00</lastmod>
+    <loc>https://LBTer.github.io/post/2024-09-08-psychology/</loc>
+    <lastmod>2024-09-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/2018/04/16/using-helm-to-deploy-to-kubernetes/</loc>
-    <lastmod>2018-04-16T15:00:00+00:00</lastmod>
+    <loc>https://LBTer.github.io/post/2024-09-08-look-for-job/</loc>
+    <lastmod>2024-09-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/api-gateway/</loc>
-    <lastmod>2018-04-11T09:32:00+00:00</lastmod>
+    <loc>https://LBTer.github.io/post/2024-09-08-project-summarize/</loc>
+    <lastmod>2024-09-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/service-mesh/</loc>
-    <lastmod>2018-04-11T09:32:00+00:00</lastmod>
+    <loc>https://LBTer.github.io/tags/blockchain/</loc>
+    <lastmod>2024-09-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/2018/04/11/service-mesh-vs-api-gateway/</loc>
-    <lastmod>2018-04-11T09:32:00+00:00</lastmod>
+    <loc>https://LBTer.github.io/post/2024-09-07-blockchain/</loc>
+    <lastmod>2024-09-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/2018/03/29/what-is-service-mesh-and-istio/</loc>
-    <lastmod>2018-03-29T12:00:00+00:00</lastmod>
+    <loc>https://LBTer.github.io/post/2024-09-06-dropbox/</loc>
+    <lastmod>2024-09-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/docker/</loc>
-    <lastmod>2018-03-13T18:00:00+00:00</lastmod>
+    <loc>https://LBTer.github.io/post/2024-09-04-ai-question/</loc>
+    <lastmod>2024-09-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/tips/</loc>
-    <lastmod>2018-03-13T18:00:00+00:00</lastmod>
+    <loc>https://LBTer.github.io/tags/ai/</loc>
+    <lastmod>2024-09-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/2018/03/13/use-docker-behind-http-proxy/</loc>
-    <lastmod>2018-03-13T18:00:00+00:00</lastmod>
+    <loc>https://LBTer.github.io/categories/ai/</loc>
+    <lastmod>2024-09-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/vim/</loc>
-    <lastmod>2018-02-09T11:00:00+00:00</lastmod>
+    <loc>https://LBTer.github.io/post/2024-09-04-build-own-x/</loc>
+    <lastmod>2024-09-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/2018/02/09/vim-tips/</loc>
-    <lastmod>2018-02-09T11:00:00+00:00</lastmod>
+    <loc>https://LBTer.github.io/tags/docker/</loc>
+    <lastmod>2024-09-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/2018/02/09/docker-without-sudo/</loc>
-    <lastmod>2018-02-09T10:00:00+00:00</lastmod>
+    <loc>https://LBTer.github.io/tags/redis/</loc>
+    <lastmod>2024-09-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/2018/05/22/user_authentication_authorization/</loc>
-    <lastmod>2018-02-03T12:00:00+00:00</lastmod>
+    <loc>https://LBTer.github.io/post/2024-09-04-k8s-build/</loc>
+    <lastmod>2024-09-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/nginmesh/</loc>
-    <lastmod>2018-01-02T12:00:00+00:00</lastmod>
+    <loc>https://LBTer.github.io/post/2024-09-04-programmer/</loc>
+    <lastmod>2024-09-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/2018/01/02/nginmesh-install/</loc>
-    <lastmod>2018-01-02T12:00:00+00:00</lastmod>
+    <loc>https://LBTer.github.io/post/2024-09-02-the-lean-startup/</loc>
+    <lastmod>2024-09-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/2017/11/28/access-application-from-outside/</loc>
-    <lastmod>2017-11-28T12:00:00+00:00</lastmod>
+    <loc>https://LBTer.github.io/tags/books/</loc>
+    <lastmod>2024-09-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/2017/11/08/istio-canary-release/</loc>
-    <lastmod>2017-11-08T15:00:00+00:00</lastmod>
+    <loc>https://LBTer.github.io/categories/knows/</loc>
+    <lastmod>2024-09-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/2017/11/07/istio-traffic-shifting/</loc>
-    <lastmod>2017-11-07T00:00:00+00:00</lastmod>
+    <loc>https://LBTer.github.io/tags/network/</loc>
+    <lastmod>2024-09-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/2017/11/04/istio-install_and_example/</loc>
-    <lastmod>2017-11-04T12:00:00+00:00</lastmod>
+    <loc>https://LBTer.github.io/tags/startup/</loc>
+    <lastmod>2024-09-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/2017/11/03/hello-world/</loc>
-    <lastmod>2017-11-04T00:00:00+00:00</lastmod>
+    <loc>https://LBTer.github.io/categories/todo/</loc>
+    <lastmod>2024-09-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>https://LBTer.github.io/categories/watch/</loc>
+    <lastmod>2024-09-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/notes/</loc>
+    <loc>https://LBTer.github.io/post/2024-09-02-network/</loc>
+    <lastmod>2024-09-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/search/placeholder/</loc>
+    <loc>https://LBTer.github.io/post/2024-09-01-system-design/</loc>
+    <lastmod>2024-09-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/archive/</loc>
+    <loc>https://LBTer.github.io/tags/sytem-design/</loc>
+    <lastmod>2024-09-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/search/</loc>
+    <loc>https://LBTer.github.io/post/2024-08-30-ai-question/</loc>
+    <lastmod>2024-08-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://LBTer.github.io/tags/insight/</loc>
+    <lastmod>2024-08-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://LBTer.github.io/tags/operate/</loc>
+    <lastmod>2024-08-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://LBTer.github.io/post/2024-08-30-redis-operate/</loc>
+    <lastmod>2024-08-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://LBTer.github.io/post/2024-08-30-tech/</loc>
+    <lastmod>2024-08-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://LBTer.github.io/post/2024-08-30-project-insight/</loc>
+    <lastmod>2024-08-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://LBTer.github.io/tags/concept/</loc>
+    <lastmod>2024-08-29T02:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://LBTer.github.io/post/2024-08-29-redis-concept/</loc>
+    <lastmod>2024-08-29T02:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://LBTer.github.io/tags/interview/</loc>
+    <lastmod>2024-08-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://LBTer.github.io/post/2024-08-29-redis-interview/</loc>
+    <lastmod>2024-08-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://LBTer.github.io/categories/plan/</loc>
+    <lastmod>2024-08-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://LBTer.github.io/post/2024-08-28-hello-world/</loc>
+    <lastmod>2024-08-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://LBTer.github.io/post/2024-08-28-resume-todo/</loc>
+    <lastmod>2024-08-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://LBTer.github.io/about/</loc>
+  </url><url>
+    <loc>https://LBTer.github.io/notes/</loc>
+  </url><url>
+    <loc>https://LBTer.github.io/search/placeholder/</loc>
+  </url><url>
+    <loc>https://LBTer.github.io/archive/</loc>
+  </url><url>
+    <loc>https://LBTer.github.io/search/</loc>
   </url>
 </urlset>

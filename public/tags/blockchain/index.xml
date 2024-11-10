@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blockchain on LBT的 Blog</title>
+    <link>https://LBTer.github.io/tags/blockchain/</link>
+    <description>Recent content in Blockchain on LBT的 Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 07 Sep 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://LBTer.github.io/tags/blockchain/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>区块链学习</title>
+      <link>https://LBTer.github.io/post/2024-09-07-blockchain/</link>
+      <pubDate>Sat, 07 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://LBTer.github.io/post/2024-09-07-blockchain/</guid>
+      <description>北京大学肖臻老师《区块链技术与应用》公开课 笔记 比特币 原理 加密货币crypto -currency 密码学的的哈希函数cryptographic hash function 性质1: collision re</description>
+    </item>
+  </channel>
+</rss>
